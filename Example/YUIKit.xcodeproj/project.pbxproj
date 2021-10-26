@@ -66,7 +66,7 @@
 		B60FBBC30420E291287D43B0 /* Pods-YUIKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YUIKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-YUIKit_Example/Pods-YUIKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		BA84F9D32727F8C300A96062 /* YUIExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUIExampleViewController.h; sourceTree = "<group>"; };
 		BA84F9D42727F8C300A96062 /* YUIExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUIExampleViewController.m; sourceTree = "<group>"; };
-		BAA6CC032722647A006862C2 /* YUIArchitectureKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = YUIArchitectureKit.podspec; path = ../YUIArchitectureKit.podspec; sourceTree = "<group>"; };
+		BAA6CC032722647A006862C2 /* YUIArchitectureKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = YUIArchitectureKit.podspec; path = ../YUIArchitectureKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CC1B4187294A16F5F1422CA6 /* Pods_YUIKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YUIKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
