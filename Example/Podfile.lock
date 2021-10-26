@@ -1,27 +1,29 @@
 PODS:
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
-  - YUIKit (0.1.0)
+  - YUIArchitectureKit (0.1.0):
+    - YUIArchitectureKit/YUIArchitecture (= 0.1.0)
+    - YUIArchitectureKit/YUICore (= 0.1.0)
+    - YUIArchitectureKit/YUILog (= 0.1.0)
+    - YUIArchitectureKit/YUIWeakObjectContainer (= 0.1.0)
+  - YUIArchitectureKit/YUIArchitecture (0.1.0):
+    - YUIArchitectureKit/YUICore
+    - YUIArchitectureKit/YUILog
+    - YUIArchitectureKit/YUIWeakObjectContainer
+  - YUIArchitectureKit/YUICore (0.1.0):
+    - YUIArchitectureKit/YUILog
+    - YUIArchitectureKit/YUIWeakObjectContainer
+  - YUIArchitectureKit/YUILog (0.1.0)
+  - YUIArchitectureKit/YUIWeakObjectContainer (0.1.0)
 
 DEPENDENCIES:
-  - FBSnapshotTestCase
-  - YUIKit (from `../`)
-
-SPEC REPOS:
-  trunk:
-    - FBSnapshotTestCase
+  - YUIArchitectureKit (from `../`)
 
 EXTERNAL SOURCES:
-  YUIKit:
+  YUIArchitectureKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  YUIKit: e60981c2550fe146e3b450cdad418c79912af76c
+  YUIArchitectureKit: c23f0981f2487bbf754e9bb6ee05f0f1d7f2ad2c
 
-PODFILE CHECKSUM: 0193bfc8f30d86e9144290c9b92c85696d6c9f21
+PODFILE CHECKSUM: c0769de5ccea42cadacb61599a2afbf99b323f09
 
 COCOAPODS: 1.10.1

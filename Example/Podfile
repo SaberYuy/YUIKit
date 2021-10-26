@@ -1,13 +1,13 @@
 use_frameworks!
 
-platform :ios, '9.0'
+platform :ios, '10.0'
 
 target 'YUIKit_Example' do
-  pod 'YUIKit', :path => '../'
+  pod 'YUIArchitectureKit', :path => '../'
 
   target 'YUIKit_Tests' do
     inherit! :search_paths
 
-    pod 'FBSnapshotTestCase'
+#    pod 'FBSnapshotTestCase'
   end
 end

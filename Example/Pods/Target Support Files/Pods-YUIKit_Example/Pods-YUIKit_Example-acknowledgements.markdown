@@ -1,7 +1,7 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## YUIKit
+## YUIArchitectureKit
 
 Copyright (c) 2021 SaberYuy <750874701@qq.com>
 

@@ -85,18 +85,18 @@
 
 #pragma mark - 变量-设备相关
 
-/// 设备类型
-#define IS_IPAD [YUIHelper isIPad]
-#define IS_IPOD [YUIHelper isIPod]
-#define IS_IPHONE [YUIHelper isIPhone]
-#define IS_SIMULATOR [YUIHelper isSimulator]
-#define IS_MAC [YUIHelper isMac]
+///// 设备类型
+//#define IS_IPAD [YUIHelper isIPad]
+//#define IS_IPOD [YUIHelper isIPod]
+//#define IS_IPHONE [YUIHelper isIPhone]
+//#define IS_SIMULATOR [YUIHelper isSimulator]
+//#define IS_MAC [YUIHelper isMac]
 
 /// 操作系统版本号，只获取第二级的版本号，例如 10.3.1 只会得到 10.3
 #define IOS_VERSION ([[[UIDevice currentDevice] systemVersion] doubleValue])
 
-/// 数字形式的操作系统版本号，可直接用于大小比较；如 110205 代表 11.2.5 版本；根据 iOS 规范，版本号最多可能有3位
-#define IOS_VERSION_NUMBER [YUIHelper numbericOSVersion]
+///// 数字形式的操作系统版本号，可直接用于大小比较；如 110205 代表 11.2.5 版本；根据 iOS 规范，版本号最多可能有3位
+//#define IOS_VERSION_NUMBER [YUIHelper numbericOSVersion]
 
 /// 是否横竖屏
 /// 用户界面横屏了才会返回YES
@@ -116,47 +116,47 @@
 /// 设备高度，跟横竖屏无关
 #define DEVICE_HEIGHT MAX([[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)
 
-/// 在 iPad 分屏模式下等于 app 实际运行宽度，否则等同于 SCREEN_WIDTH
-#define APPLICATION_WIDTH [YUIHelper applicationSize].width
-
-/// 在 iPad 分屏模式下等于 app 实际运行宽度，否则等同于 DEVICE_HEIGHT
-#define APPLICATION_HEIGHT [YUIHelper applicationSize].height
-
-/// 是否全面屏设备
-#define IS_NOTCHED_SCREEN [YUIHelper isNotchedScreen]
-/// iPhone 12 Pro Max
-#define IS_67INCH_SCREEN [YUIHelper is67InchScreen]
-/// iPhone XS Max
-#define IS_65INCH_SCREEN [YUIHelper is65InchScreen]
-/// iPhone 12 / 12 Pro
-#define IS_61INCH_SCREEN_AND_IPHONE12 [YUIHelper is61InchScreenAndiPhone12]
-/// iPhone XR
-#define IS_61INCH_SCREEN [YUIHelper is61InchScreen]
-/// iPhone X/XS
-#define IS_58INCH_SCREEN [YUIHelper is58InchScreen]
-/// iPhone 6/7/8 Plus
-#define IS_55INCH_SCREEN [YUIHelper is55InchScreen]
-/// iPhone 12 mini
-#define IS_54INCH_SCREEN [YUIHelper is54InchScreen]
-/// iPhone 6/7/8
-#define IS_47INCH_SCREEN [YUIHelper is47InchScreen]
-/// iPhone 5/5S/SE
-#define IS_40INCH_SCREEN [YUIHelper is40InchScreen]
-/// iPhone 4/4S
-#define IS_35INCH_SCREEN [YUIHelper is35InchScreen]
+///// 在 iPad 分屏模式下等于 app 实际运行宽度，否则等同于 SCREEN_WIDTH
+//#define APPLICATION_WIDTH [YUIHelper applicationSize].width
+//
+///// 在 iPad 分屏模式下等于 app 实际运行宽度，否则等同于 DEVICE_HEIGHT
+//#define APPLICATION_HEIGHT [YUIHelper applicationSize].height
+//
+///// 是否全面屏设备
+//#define IS_NOTCHED_SCREEN [YUIHelper isNotchedScreen]
+///// iPhone 12 Pro Max
+//#define IS_67INCH_SCREEN [YUIHelper is67InchScreen]
+///// iPhone XS Max
+//#define IS_65INCH_SCREEN [YUIHelper is65InchScreen]
+///// iPhone 12 / 12 Pro
+//#define IS_61INCH_SCREEN_AND_IPHONE12 [YUIHelper is61InchScreenAndiPhone12]
+///// iPhone XR
+//#define IS_61INCH_SCREEN [YUIHelper is61InchScreen]
+///// iPhone X/XS
+//#define IS_58INCH_SCREEN [YUIHelper is58InchScreen]
+///// iPhone 6/7/8 Plus
+//#define IS_55INCH_SCREEN [YUIHelper is55InchScreen]
+///// iPhone 12 mini
+//#define IS_54INCH_SCREEN [YUIHelper is54InchScreen]
+///// iPhone 6/7/8
+//#define IS_47INCH_SCREEN [YUIHelper is47InchScreen]
+///// iPhone 5/5S/SE
+//#define IS_40INCH_SCREEN [YUIHelper is40InchScreen]
+///// iPhone 4/4S
+//#define IS_35INCH_SCREEN [YUIHelper is35InchScreen]
 /// iPhone 4/4S/5/5S/SE
-#define IS_320WIDTH_SCREEN (IS_35INCH_SCREEN || IS_40INCH_SCREEN)
+//#define IS_320WIDTH_SCREEN (IS_35INCH_SCREEN || IS_40INCH_SCREEN)
 
 /// 是否Retina
 #define IS_RETINASCREEN ([[UIScreen mainScreen] scale] >= 2.0)
 
-/// 是否放大模式（iPhone 6及以上的设备支持放大模式，iPhone X 除外）
-#define IS_ZOOMEDMODE [YUIHelper isZoomedMode]
+///// 是否放大模式（iPhone 6及以上的设备支持放大模式，iPhone X 除外）
+//#define IS_ZOOMEDMODE [YUIHelper isZoomedMode]
 
 #pragma mark - 变量-布局相关
 
-/// 获取一个像素
-#define PixelOne [YUIHelper pixelOne]
+///// 获取一个像素
+//#define PixelOne [YUIHelper pixelOne]
 
 /// bounds && nativeBounds / scale && nativeScale
 #define ScreenBoundsSize ([[UIScreen mainScreen] bounds].size)
@@ -173,8 +173,8 @@
 /// 状态栏高度(来电等情况下，状态栏高度会发生变化，所以应该实时计算，iOS 13 起，来电等情况下状态栏高度不会改变)
 #define StatusBarHeight (UIApplication.sharedApplication.statusBarHidden ? 0 : UIApplication.sharedApplication.statusBarFrame.size.height)
 
-/// 状态栏高度(如果状态栏不可见，也会返回一个普通状态下可见的高度)
-#define StatusBarHeightConstant (UIApplication.sharedApplication.statusBarHidden ? (IS_IPAD ? (IS_NOTCHED_SCREEN ? 24 : 20) : PreferredValueForNotchedDevice(IS_LANDSCAPE ? 0 : ([[YUIHelper deviceModel] isEqualToString:@"iPhone12,1"] ? 48 : (IS_61INCH_SCREEN_AND_IPHONE12 || IS_67INCH_SCREEN ? 47 : 44)), 20)) : UIApplication.sharedApplication.statusBarFrame.size.height)
+///// 状态栏高度(如果状态栏不可见，也会返回一个普通状态下可见的高度)
+//#define StatusBarHeightConstant (UIApplication.sharedApplication.statusBarHidden ? (IS_IPAD ? (IS_NOTCHED_SCREEN ? 24 : 20) : PreferredValueForNotchedDevice(IS_LANDSCAPE ? 0 : ([[YUIHelper deviceModel] isEqualToString:@"iPhone12,1"] ? 48 : (IS_61INCH_SCREEN_AND_IPHONE12 || IS_67INCH_SCREEN ? 47 : 44)), 20)) : UIApplication.sharedApplication.statusBarFrame.size.height)
 
 /// navigationBar 的静态高度
 #define NavigationBarHeight (IS_IPAD ? (IOS_VERSION >= 12.0 ? 50 : 44) : (IS_LANDSCAPE ? PreferredValueForVisualDevice(44, 32) : 44))
@@ -189,17 +189,17 @@
 /// 判断当前是否是处于分屏模式的 iPad
 #define IS_SPLIT_SCREEN_IPAD (IS_IPAD && APPLICATION_WIDTH != SCREEN_WIDTH)
 
-/// iPhoneX 系列全面屏手机的安全区域的静态值
-#define SafeAreaInsetsConstantForDeviceWithNotch [YUIHelper safeAreaInsetsForDeviceWithNotch]
+///// iPhoneX 系列全面屏手机的安全区域的静态值
+//#define SafeAreaInsetsConstantForDeviceWithNotch [YUIHelper safeAreaInsetsForDeviceWithNotch]
 
-/// 将所有屏幕按照宽松/紧凑分类，其中 iPad、iPhone XS Max/XR/Plus 均为宽松屏幕，但开启了放大模式的设备均会视为紧凑屏幕
-#define PreferredValueForVisualDevice(_regular, _compact) ([YUIHelper isRegularScreen] ? _regular : _compact)
-
-/// 将所有屏幕按照 Phone/Pad 分类，由于历史上宽高比最大（最胖）的手机为 iPhone 4，所以这里以它为基准，只要宽高比比 iPhone 4 更小的，都视为 Phone，其他情况均视为 Pad。注意 iPad 分屏则取分屏后的宽高来计算。
-#define PreferredValueForInterfaceIdiom(_phone, _pad) (APPLICATION_WIDTH / APPLICATION_HEIGHT <= YUIHelper.screenSizeFor35Inch.width / YUIHelper.screenSizeFor35Inch.height ? _phone : _pad)
+///// 将所有屏幕按照宽松/紧凑分类，其中 iPad、iPhone XS Max/XR/Plus 均为宽松屏幕，但开启了放大模式的设备均会视为紧凑屏幕
+//#define PreferredValueForVisualDevice(_regular, _compact) ([YUIHelper isRegularScreen] ? _regular : _compact)
+//
+///// 将所有屏幕按照 Phone/Pad 分类，由于历史上宽高比最大（最胖）的手机为 iPhone 4，所以这里以它为基准，只要宽高比比 iPhone 4 更小的，都视为 Phone，其他情况均视为 Pad。注意 iPad 分屏则取分屏后的宽高来计算。
+//#define PreferredValueForInterfaceIdiom(_phone, _pad) (APPLICATION_WIDTH / APPLICATION_HEIGHT <= YUIHelper.screenSizeFor35Inch.width / YUIHelper.screenSizeFor35Inch.height ? _phone : _pad)
 
 /// 区分全面屏和非全面屏
-#define PreferredValueForNotchedDevice(_notchedDevice, _otherDevice) ([YUIHelper isNotchedScreen] ? _notchedDevice : _otherDevice)
+//#define PreferredValueForNotchedDevice(_notchedDevice, _otherDevice) ([YUIHelper isNotchedScreen] ? _notchedDevice : _otherDevice)
 
 
 #pragma mark - 变量-布局相关-已废弃
@@ -212,12 +212,12 @@
 /// 同上，单独将 iPad 区分对待
 #define PreferredValueForDeviceIncludingiPad(_iPad, _65or61or55inch, _47or58inch, _40inch, _35inch) PreferredValueForAll(_iPad, _65or61or55inch, _65or61or55inch, _47or58inch, _65or61or55inch, _47or58inch, _40inch, _35inch)
 
-/// 若 iPad 处于分屏模式下，返回 iPad 接近 iPhone 宽度（320、375、414）中近似的一种，方便屏幕适配。
-#define IPAD_SIMILAR_SCREEN_WIDTH [YUIHelper preferredLayoutAsSimilarScreenWidthForIPad]
-
-#define _40INCH_WIDTH [YUIHelper screenSizeFor40Inch].width
-#define _58INCH_WIDTH [YUIHelper screenSizeFor58Inch].width
-#define _65INCH_WIDTH [YUIHelper screenSizeFor65Inch].width
+///// 若 iPad 处于分屏模式下，返回 iPad 接近 iPhone 宽度（320、375、414）中近似的一种，方便屏幕适配。
+//#define IPAD_SIMILAR_SCREEN_WIDTH [YUIHelper preferredLayoutAsSimilarScreenWidthForIPad]
+//
+//#define _40INCH_WIDTH [YUIHelper screenSizeFor40Inch].width
+//#define _58INCH_WIDTH [YUIHelper screenSizeFor58Inch].width
+//#define _65INCH_WIDTH [YUIHelper screenSizeFor65Inch].width
 
 #define AS_IPAD (DynamicPreferredValueForIPad ? ((IS_IPAD && !IS_SPLIT_SCREEN_IPAD) || (IS_SPLIT_SCREEN_IPAD && APPLICATION_WIDTH >= 768)) : IS_IPAD)
 #define AS_65INCH_SCREEN (IS_67INCH_SCREEN || IS_65INCH_SCREEN || (IS_IPAD && DynamicPreferredValueForIPad && IPAD_SIMILAR_SCREEN_WIDTH == _65INCH_WIDTH))
@@ -283,8 +283,8 @@ AddAccessibilityHint(NSObject *obj, NSString *hint) {
 
 #pragma mark - 其他
 
-// 固定黑色的 StatusBarStyle，用于亮色背景，作为 -preferredStatusBarStyle 方法的 return 值使用。
-#define YUIStatusBarStyleDarkContent [YUIHelper statusBarStyleDarkContent]
+//// 固定黑色的 StatusBarStyle，用于亮色背景，作为 -preferredStatusBarStyle 方法的 return 值使用。
+//#define YUIStatusBarStyleDarkContent [YUIHelper statusBarStyleDarkContent]
 
 #define StringFromBOOL(_flag) (_flag ? @"YES" : @"NO")
 
