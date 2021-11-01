@@ -61,11 +61,6 @@
     [self initSubviews];
     [self configureBingding];
     [self setupSubviewsConstraints];
-    
-    if (self.viewModel && [self.viewModel respondsToSelector:@selector(loadData:)]) {
-        
-        [self.viewModel loadData:nil];
-    }
 }
 
 //不可直接在分类中使用定义的同名子类继承的方法

@@ -63,10 +63,6 @@
     [self initSubviews];
     [self configureBingding];
     [self setupSubviewsConstraints];
-    
-    if(self.modelManager && [self.modelManager respondsToSelector:@selector(loadData:)]){
-        [self.modelManager loadData:nil];
-    }
 }
 
 -(void)mvc_configureBingding{
