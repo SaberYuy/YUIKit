@@ -33,22 +33,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface YUIViewController : UIViewController<YUIViewControllerProtocol,YUIViewProtocol,YUIModelManagerProtocol,YUIViewDelegateProtocol,YUIViewControllerDelegateProtocol>
 
 @property (nonatomic, assign) BOOL isFirstAppear;
-@property (nonatomic, assign) ArchitectureType architectureType;
-@property (nonatomic, copy) NSString *architectureName;
-@property (nonatomic, copy) NSString *bindingName;
 
 @property (nonatomic, strong) UIView <YUIViewProtocol> *mainView;
 @property (nonatomic, strong) id <YUIModelManagerProtocol> modelManager;
 
-+(instancetype)sharedInstance;
++ (instancetype)sharedInstance;
 
--(void)configureArchitecture:( ArchitectureType )architectureType bindingName:( NSString * _Nullable )bindingName NS_REQUIRES_SUPER;
-
--(void)configureArchitectureWithName:( NSString * )architectureName bindingName:( NSString * _Nullable )bindingName NS_REQUIRES_SUPER;
-
--(void)executeMethodFromArchitecture:(SEL)selector;
-
--(BOOL)isBlankString:(NSString *)tempStr;
+-(void)configureArchitecture:( ArchitectureType )architectureType;
 
 @end
 

@@ -13,37 +13,37 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (YUISubclassingHooks)
 
--(void)didInitialize;
+- (void)didInitialize;
 
--(void)setupMainView;
+- (void)setupMainView;
 
--(void)initSubviews;
+- (void)initSubviews;
 
 ///  负责subviews使用setFrame布局
--(void)setupSubviewsFrame;
+- (void)setupSubviewsFrame;
 
 ///  负责subviews使用layout布局
--(void)setupSubviewsConstraints;
+- (void)setupSubviewsConstraints;
 
 ///  负责配置手势
--(void)configureGesture;
+- (void)configureGesture;
 
 ///  负责更新视图
--(void)updateSubviews:(nullable id)model;
+- (void)updateSubviews:(nullable id)model;
 
 ///  负责更新视图布局
--(void)updateSubviewsLayout:(nullable id)model;
+- (void)updateSubviewsLayout:(nullable id)model;
 
 ///  负责传入模型直接赋值
--(void)configureViewWithModel:(id)model;
+- (void)configureViewWithModel:(id)model;
 
 ///  负责传入ViewModel直接赋值
--(void)configureViewWithViewModel:(id<YUIViewModelDelegateProtocol>)viewModel;
+- (void)configureViewWithViewModel:(id<YUIViewModelDelegateProtocol>)viewModel;
 
 ///  负责输出视图大小
-+(CGSize)getSize:(id)model;
++ (CGSize)getSize:(id)model;
 
--(CGSize)getSize;
+- (CGSize)getSize;
 
 @end
 

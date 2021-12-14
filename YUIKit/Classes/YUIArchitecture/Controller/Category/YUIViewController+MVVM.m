@@ -19,38 +19,37 @@
 
 #pragma mark - init
 
--(void)mvvm_configureArchitecture{
+- (void)mvvm_configureArchitectureWithBindingName:(NSString *)bindingName{
     
     //  mainView
-    Class mainViewClass = NSClassFromString([NSString stringWithFormat:@"%@View",self.bindingName]);
+    Class mainViewClass = NSClassFromString([NSString stringWithFormat:@"%@View", bindingName]);
     if (mainViewClass != NULL && [mainViewClass conformsToProtocol:@protocol(YUIViewProtocol)]) {
         
         self.mainView = [mainViewClass new];
     }
     
     //  ViewModel
-    Class viewModelClass = NSClassFromString([NSString stringWithFormat:@"%@ViewModel",self.bindingName]);
+    Class viewModelClass = NSClassFromString([NSString stringWithFormat:@"%@ViewModel", bindingName]);
     if (viewModelClass != NULL && [viewModelClass conformsToProtocol:@protocol(YUIViewModelProtocol)]) {
         
         self.viewModel = [viewModelClass new];
     }
     
     //  ViewManager
-    Class viewManagerClass = NSClassFromString([NSString stringWithFormat:@"%@ViewManager",self.bindingName]);
+    Class viewManagerClass = NSClassFromString([NSString stringWithFormat:@"%@ViewManager", bindingName]);
     if (viewManagerClass != NULL && [viewManagerClass conformsToProtocol:@protocol(YUIViewManagerProtocol)]) {
         
         self.viewManager = [viewManagerClass new];
     }
 }
 
--(void)mvvm_didInitialize{
-
-    [self configureObserver];
-}
+//- (void)mvvm_didInitialize{
+//
+//}
 
 #pragma mark - Lifecycle
 
--(void)mvvm_viewDidLoad{
+- (void)mvvm_viewDidLoad{
     
     if(self.mainView){
         
@@ -58,13 +57,16 @@
         self.view = self.mainView;
     }
     [self setupMainView];
+    
     [self initSubviews];
+    
     [self configureBingding];
+    
     [self setupSubviewsConstraints];
 }
 
 //不可直接在分类中使用定义的同名子类继承的方法
--(void)mvvm_configureBingding{
+- (void)mvvm_configureBingding{
     
     if(self.mainView && self.viewModel && self.viewManager){
         
@@ -105,17 +107,17 @@
 }
 
 
--(void)mvvm_viewDidLayoutSubviews{
+- (void)mvvm_viewDidLayoutSubviews{
     
     [self setupSubviewsFrame];
 }
 
--(void)mvvm_dealloc{
+- (void)mvvm_dealloc{
     
     [self cleanupObserver];
 }
 
-//-(NSObject <YUIViewModelProtocol>*)viewModel {
+//- (NSObject <YUIViewModelProtocol>*)viewModel {
 //    
 //    if (!_viewModel) {
 //        

@@ -25,18 +25,18 @@
 /**
  *  初始化
  */
--(instancetype)initWithViewModel:(id<YUIViewModelProtocol>)viewModel viewManager:(id<YUIViewManagerProtocol>)viewManager;
+- (instancetype)initWithViewModel:(id<YUIViewModelProtocol>)viewModel viewManager:(id<YUIViewManagerProtocol>)viewManager;
 
 + (instancetype)mediatorWithViewModel:(id<YUIViewModelProtocol>)viewModel viewManager:(id<YUIViewManagerProtocol>)viewManager;
 
 /**
  *  将info通知viewModel
  */
--(void)noticeViewModelWithInfo:(NSDictionary *)info;
+- (void)noticeViewModelWithInfo:(NSDictionary *)info;
 
 /**
  *  将info通知viewMnager
  */
--(void)noticeViewManagerWithInfo:(NSDictionary *)info;
+- (void)noticeViewManagerWithInfo:(NSDictionary *)info;
 
 @end

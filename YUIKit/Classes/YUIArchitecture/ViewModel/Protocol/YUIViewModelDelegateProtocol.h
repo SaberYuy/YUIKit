@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param viewModel   viewModel自己
  *  @param info 描述信息
  */
--(void)viewModel:(id)viewModel withInfo:(NSDictionary *)info;
+- (void)viewModel:(id)viewModel withInfo:(NSDictionary *)info;
 
 @end
 

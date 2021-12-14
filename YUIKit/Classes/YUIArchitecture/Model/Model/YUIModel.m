@@ -30,7 +30,7 @@
     return [[self alloc]initWithModel:object];
 }
 
--(instancetype)init{
+- (instancetype)init{
     
     self = [super init];
     
@@ -42,7 +42,7 @@
     return self;
 }
 
--(instancetype)initWithModel:(id)object{
+- (instancetype)initWithModel:(id)object{
     
     self = [self init];
     if (self == nil) return nil;
@@ -73,7 +73,7 @@
      return [[self alloc]initWithDictionary:dictionary];
 }
 
--(instancetype)initWithDictionary:(NSDictionary *)dictionary{
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary{
     
     self = [self init];
     if (self == nil) return nil;
@@ -108,7 +108,7 @@
     return nil;
 }
 
-//-(instancetype)initWithJSONDictionary:(NSDictionary *)dictionary{
+//- (instancetype)initWithJSONDictionary:(NSDictionary *)dictionary{
 //
 ////    return [MTLJSONAdapter modelOfClass:[self class] fromJSONDictionary:dictionary error:error];
 //
@@ -122,7 +122,7 @@
     return nil;
 }
 
--(NSDictionary *)dictionaryWithModel{
+- (NSDictionary *)dictionaryWithModel{
     
     NSDictionary *dictionary = [[NSDictionary alloc]init];
     
@@ -146,7 +146,7 @@
     return nil;
 }
 
--(NSDictionary *)jSONDictionaryWithModel{
+- (NSDictionary *)jSONDictionaryWithModel{
     
 //    return [self yy_modelToJSONObject];
     
@@ -168,7 +168,7 @@
     return nil;
 }
 
-//+(instancetype)instanceWithCoder:(NSCoder *)decoder{
+//+ (instancetype)instanceWithCoder:(NSCoder *)decoder{
 //
 //    if (decoder) {
 //
@@ -178,7 +178,7 @@
 //    return nil;
 //}
 
-//-(instancetype)initWithCoder:(NSCoder *)decoder{
+//- (instancetype)initWithCoder:(NSCoder *)decoder{
 //
 //    if ((self = [[super class] initWithCoder:decoder])){
 //
@@ -188,7 +188,7 @@
 //    return self;
 //}
 
--(NSArray *)getAllProperties{
+- (NSArray *)getAllProperties{
     
     u_int count;
     
@@ -207,7 +207,7 @@
     return propertiesArray;
 }
 
--(void)setDataWithMatchModelProperty:(NSObject *)object{
+- (void)setDataWithMatchModelProperty:(NSObject *)object{
     
     u_int count;
     

@@ -13,7 +13,7 @@
 
 @implementation YUIMediator
 
--(instancetype)initWithViewModel:(id<YUIViewModelProtocol>)viewModel viewManager:(id<YUIViewManagerProtocol>)viewManager {
+- (instancetype)initWithViewModel:(id<YUIViewModelProtocol>)viewModel viewManager:(id<YUIViewManagerProtocol>)viewManager {
     if (self = [super init]) {
         self.viewModel = (NSObject<YUIViewModelProtocol> *)viewModel;
         self.viewManager = (NSObject<YUIViewManagerProtocol> *)viewManager;
@@ -25,7 +25,7 @@
     return [[self alloc]initWithViewModel:viewModel viewManager:viewManager];
 }
 
--(void)noticeViewModelWithInfo:(NSDictionary *)info {
+- (void)noticeViewModelWithInfo:(NSDictionary *)info {
     
     if([self.viewModel isKindOfClass:[YUIViewModel class]]){
         
@@ -33,7 +33,7 @@
     }
 }
 
--(void)noticeViewManagerWithInfo:(NSDictionary *)info {
+- (void)noticeViewManagerWithInfo:(NSDictionary *)info {
     
     if([self.viewManager isKindOfClass:[YUIViewManager class]]){
         

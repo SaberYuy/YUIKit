@@ -152,6 +152,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSString *)yui_timeStringWithMinsAndSecsFromSecs:(double)seconds;
 
+
+- (BOOL)yui_isNullString;
+
 @end
 
 @interface NSString (YUI_StringFormat)

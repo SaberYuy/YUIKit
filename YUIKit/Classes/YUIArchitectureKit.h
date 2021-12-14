@@ -23,7 +23,7 @@
 //#endif
 //
 
-static NSString * const YUI_VERSION = @"0.0.7";
+static NSString * const YUI_VERSION = @"0.1.3";
 
 #if __has_include("YUICore.h")
 #import "YUICore.h"

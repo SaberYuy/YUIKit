@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 
--(void)viewController:(__kindof UIViewController *)viewController withInfo:(NSDictionary *)info;
+- (void)viewController:(__kindof UIViewController *)viewController withInfo:(NSDictionary *)info;
 
 @end
 

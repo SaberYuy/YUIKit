@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param viewManager   viewManager自己
  *  @param info 描述信息
  */
--(void)viewManager:(id)viewManager withInfo:(NSDictionary *)info;
+- (void)viewManager:(id)viewManager withInfo:(NSDictionary *)info;
 
 @end
 

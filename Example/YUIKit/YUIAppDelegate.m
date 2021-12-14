@@ -8,11 +8,18 @@
 
 #import "YUIAppDelegate.h"
 
+#import <YUIArchitectureKit.h>
+#import "YUIExampleViewController.h"
+
 @implementation YUIAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    YUIExampleViewController *viewController = [YUIExampleViewController new];
+    self.window.rootViewController = viewController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

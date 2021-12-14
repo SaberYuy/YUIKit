@@ -33,7 +33,7 @@
 //    return self.superview.yui_viewController;
 //}
 
--(id<YUIViewDelegateProtocol>)viewDelegate {
+- (id<YUIViewDelegateProtocol>)viewDelegate {
     
     id currentViewDelegate = objc_getAssociatedObject(self, _cmd);
     
@@ -57,19 +57,19 @@
     return objc_getAssociatedObject(self, _cmd);
 }
 
--(void)setViewDelegate:(id<YUIViewDelegateProtocol>)viewDelegate {
+- (void)setViewDelegate:(id<YUIViewDelegateProtocol>)viewDelegate {
     objc_setAssociatedObject(self, @selector(viewDelegate), viewDelegate, OBJC_ASSOCIATION_ASSIGN);
 }
 
--(ViewEventBlock)viewEventBlock {
+- (ViewEventBlock)viewEventBlock {
     return objc_getAssociatedObject(self, @selector(viewEventBlock));
 }
 
--(void)setViewEventBlock:(ViewEventBlock)viewEventBlock {
+- (void)setViewEventBlock:(ViewEventBlock)viewEventBlock {
     objc_setAssociatedObject(self, @selector(viewEventBlock), viewEventBlock, OBJC_ASSOCIATION_COPY);
 }
 
--(void)viewWithViewManager:(id<YUIViewDelegateProtocol>)viewManager {
+- (void)viewWithViewManager:(id<YUIViewDelegateProtocol>)viewManager {
     if (viewManager) {
         self.viewDelegate = viewManager;
     }

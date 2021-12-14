@@ -34,7 +34,7 @@ typedef void (^ViewEventBlock)( void);
 /**
  *  将view中的事件交由viewManager处理
  */
--(void)viewWithViewManager:(id<YUIViewDelegateProtocol>)viewManager;
+- (void)viewWithViewManager:(id<YUIViewDelegateProtocol>)viewManager;
 
 @end
 

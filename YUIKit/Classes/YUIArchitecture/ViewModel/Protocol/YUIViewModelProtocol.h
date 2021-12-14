@@ -41,32 +41,32 @@ typedef void (^ViewModelInfoBlock)(void);
 
 @optional
 
--(void)notice;
+- (void)notice;
 
 /**
  *  返回指定viewModel的所引用的控制器
  */
--(void)viewModelWithViewController:(UIViewController *)viewController;
+- (void)viewModelWithViewController:(UIViewController *)viewController;
 
 /**
  *  加载数据
  */
--(NSURLSessionTask *)viewModelWithProgress:(nullable progressBlock)progress success:(nullable successBlock)success failure:(nullable failureBlock)failure;
+- (NSURLSessionTask *)viewModelWithProgress:(nullable progressBlock)progress success:(nullable successBlock)success failure:(nullable failureBlock)failure;
 
 /**
  *  传递模型给view
  */
--(void)viewModelWithModelBlcok:(void (^)(id model))modelBlock;
+- (void)viewModelWithModelBlcok:(void (^)(id model))modelBlock;
 
 /**
  *  处理ViewManagerInfoBlock
  */
--(ViewManagerInfoBlock)viewModelWithViewManagerBlockOfInfo:(NSDictionary *)info;
+- (ViewManagerInfoBlock)viewModelWithViewManagerBlockOfInfo:(NSDictionary *)info;
 
 /**
  *  处理ViewModelInfoBlock
  */
--(ViewModelInfoBlock)viewModelWithOtherViewModelBlockOfInfo:(NSDictionary *)info;
+- (ViewModelInfoBlock)viewModelWithOtherViewModelBlockOfInfo:(NSDictionary *)info;
 
 
 @end

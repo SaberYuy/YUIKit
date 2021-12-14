@@ -11,17 +11,17 @@
 
 #pragma mark - <YUIViewControllerProtocol>
 
-//-(void)configureArchitecture{
+//- (void)configureArchitecture{
 //
 //    [self executeMethodFromArchitecture:_cmd];
 //}
 //
-//-(void)configureBingding{
+//- (void)configureBingding{
 //
 //    [self executeMethodFromArchitecture:_cmd];
 //}
 
-//-(void)didInitialize {
+//- (void)didInitialize {
 //    
 //    self.dataLoadType = DataLoadTypeCustom;
 //    self.isFirstAppear = YES;
@@ -33,23 +33,23 @@
 
 #pragma mark - <YUIViewProtocol>
 
--(void)setupMainView{
+- (void)setupMainView{
     // Rewrite this func in SubClass !
 }
 
--(void)initSubviews {
+- (void)initSubviews {
     // Rewrite this func in SubClass !
 }
 
--(void)setupSubviewsFrame{
+- (void)setupSubviewsFrame{
     // Rewrite this func in SubClass !
 }
 
--(void)setupSubviewsConstraints{
+- (void)setupSubviewsConstraints{
     // Rewrite this func in SubClass !
 }
 
--(void)configureGesture{
+- (void)configureGesture{
     // Rewrite this func in SubClass !
 }
 
@@ -57,66 +57,66 @@
     // Rewrite this func in SubClass !
 }
 
--(void)updateSubviewsLayout{
+- (void)updateSubviewsLayout{
     // Rewrite this func in SubClass !
 }
 
--(void)setupNavigationItems {
+- (void)setupNavigationItems {
     // Rewrite this func in SubClass !
 }
 
--(void)setupToolbarItems {
+- (void)setupToolbarItems {
     // Rewrite this func in SubClass !
 }
 
--(void)contentSizeCategoryDidChanged:(NSNotification *)notification {
+- (void)contentSizeCategoryDidChanged:(NSNotification *)notification {
     // Rewrite this func in SubClass !
 }
 
--(void)configureObserver{
+- (void)configureObserver{
     // Rewrite this func in SubClass !
 }
 
--(void)cleanupObserver{
+- (void)cleanupObserver{
     // Rewrite this func in SubClass !
 }
 
--(void)configureNotification{
+- (void)configureNotification{
     // Rewrite this func in SubClass !
 }
 
--(void)removeNotification{
+- (void)removeNotification{
     // Rewrite this func in SubClass !
 }
 
-//-(void)cleanupNotification{
-//   
-//    [[NSNotificationCenter defaultCenter]removeObserver:self];
-//}
+- (void)cleanupNotification{
+   
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
 
--(void)configureTimer{
+- (void)configureTimer{
     // Rewrite this func in SubClass !
 }
 
--(void)cleanupTimer{
+- (void)cleanupTimer{
     // Rewrite this func in SubClass !
 }
 
 #pragma mark - <YUIViewControllerDelegateProtocol>
 
--(void)viewController:(__kindof UIViewController *)viewController withInfo:(NSDictionary *)info{
+- (void)viewController:(__kindof UIViewController *)viewController withInfo:(NSDictionary *)info{
     
 }
 
 #pragma mark - <YUIViewDelegateProtocol>
 
--(void)view:(__kindof UIView *)view withEvent:(NSDictionary *)event{
+- (void)view:(__kindof UIView *)view withEvent:(NSDictionary *)event{
     
 }
 
 #pragma mark - <YUIViewModelDelegateProtocol>
 
--(void)viewModel:(id)viewModel withInfo:(NSDictionary *)info{
+- (void)viewModel:(id)viewModel withInfo:(NSDictionary *)info{
     
 }
 

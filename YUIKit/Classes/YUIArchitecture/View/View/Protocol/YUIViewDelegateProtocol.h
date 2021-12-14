@@ -19,7 +19,7 @@
  *  @param view   view自己
  *  @param event 所触发事件的一些描述信息
  */
--(void)view:(__kindof UIView *)view withEvent:(NSDictionary *)event;
+- (void)view:(__kindof UIView *)view withEvent:(NSDictionary *)event;
 
 @end
 

@@ -284,6 +284,22 @@
     return [regex stringByReplacingMatchesInString:self options:NSMatchingReportCompletion range:NSMakeRange(0, self.length) withTemplate:replacement];
 }
 
+- (BOOL)yui_isNullString{
+    
+    if (!self) {
+        return YES;
+    }
+    if ([self isKindOfClass:[NSNull class]]) {
+        return YES;
+    }
+    NSCharacterSet *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    NSString *trimmedStr = [self stringByTrimmingCharactersInSet:set];
+    if (!trimmedStr.length) {
+        return YES;
+    }
+    return NO;
+}
+
 @end
 
 @implementation NSString (YUI_StringFormat)
