@@ -20,4 +20,18 @@
     [super configureArchitecture:ArchitectureTypeMVC];
 }
 
+//-(void)setupMainView{
+//    
+//    [super setupMainView]
+//}
+
+-(void)initSubviews{
+    
+    [super initSubviews];
+    
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake( 100, 100, 100, 100)];
+    [btn setBackgroundColor:[UIColor yellowColor]];
+    [self.view addSubview:btn];
+}
+
 @end

@@ -81,18 +81,18 @@
     // Rewrite this func in SubClass !
 }
 
-- (void)configureNotification{
+//- (void)configureNotification{
     // Rewrite this func in SubClass !
-}
+//}
 
 - (void)removeNotification{
     // Rewrite this func in SubClass !
 }
 
-- (void)cleanupNotification{
-   
-    [[NSNotificationCenter defaultCenter]removeObserver:self];
-}
+//- (void)cleanupNotification{
+//   
+//    [[NSNotificationCenter defaultCenter]removeObserver:self];
+//}
 
 - (void)configureTimer{
     // Rewrite this func in SubClass !

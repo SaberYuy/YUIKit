@@ -51,11 +51,6 @@
 
 - (void)mvvm_viewDidLoad{
     
-    if(self.mainView){
-        
-        self.mainView.frame = self.view.bounds;
-        self.view = self.mainView;
-    }
     [self setupMainView];
     
     [self initSubviews];

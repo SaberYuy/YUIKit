@@ -46,7 +46,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)configureViewWithViewModel:(id<YUIViewModelDelegateProtocol>)viewModel;
 
 ///  负责传入模型计算视图动态的尺寸
-+ (CGSize)calculateSize:(id)model;
++ (CGSize)calculateSize:(nullable id)model;
+
+///  负责传入模型计算视图动态的尺寸
+- (CGSize)calculateSize:(nullable id)model;
 
 @end
 

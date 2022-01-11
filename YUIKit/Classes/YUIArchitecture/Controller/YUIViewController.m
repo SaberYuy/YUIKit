@@ -62,7 +62,6 @@ NSString * const kMVVMPrefixStr = @"mvvm";
         
         [self didInitialize];
     }
-    
     return self;
 }
 
@@ -136,7 +135,7 @@ NSString * const kMVVMPrefixStr = @"mvvm";
 }
 
 - (void)configureNotification{
- 
+    
     // Rewrite this func in SubClass !
 }
 
@@ -146,7 +145,11 @@ NSString * const kMVVMPrefixStr = @"mvvm";
 // 当访问UIViewController的view属性时，view如果此时是nil，那么VC会自动调用loadView方法来初始化一个UIView并赋值给view属性。此方法用在初始化关键view
 - (void)loadView{
     
-    [super loadView];
+    if(self.mainView){
+        
+        self.mainView.frame = [UIScreen mainScreen].bounds;
+        self.view = self.mainView;
+    }
     
     [self performSelectorForArchitecture:_cmd withObject:nil];
 }
@@ -203,7 +206,7 @@ NSString * const kMVVMPrefixStr = @"mvvm";
     [super viewDidAppear:animated];
     
     if(self.isFirstAppear)
-    self.isFirstAppear = NO;
+        self.isFirstAppear = NO;
     
     [self performSelectorForArchitecture:_cmd withObject:nil];
 }
@@ -233,7 +236,7 @@ NSString * const kMVVMPrefixStr = @"mvvm";
 }
 
 - (void)cleanupNotification{
-   
+    
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
@@ -257,9 +260,9 @@ NSString * const kMVVMPrefixStr = @"mvvm";
         BeginIgnorePerformSelectorLeaksWarning
         [self performSelector:tempSelector withObject:object];
         EndIgnorePerformSelectorLeaksWarning
-//        IMP imp = [self methodForSelector:tempSelector];
-//        void (*func)(id, SEL) = (void *)imp;
-//        func(self, tempSelector);
+        //        IMP imp = [self methodForSelector:tempSelector];
+        //        void (*func)(id, SEL) = (void *)imp;
+        //        func(self, tempSelector);
     }
 }
 

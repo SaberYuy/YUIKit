@@ -49,13 +49,15 @@
     // Rewrite this func in SubClass !
 }
 
-+ (CGSize)getSize:(id)model{
++ (CGSize)calculateSize:(nullable id)model{
     
+    // Rewrite this func in SubClass !
     return CGSizeZero;
 }
 
-- (CGSize)getSize{
+- (CGSize)calculateSize:(nullable id)model{
     
+    // Rewrite this func in SubClass !
     return CGSizeZero;
 }
 

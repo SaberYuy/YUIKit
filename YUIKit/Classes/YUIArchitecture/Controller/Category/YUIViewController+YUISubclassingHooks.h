@@ -95,7 +95,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeNotification NS_REQUIRES_SUPER;
 
 ///  清理通知，一般在<b>dealloc</b>中调用，现在的系统会在delloc自动调用removeNotification。
-- (void)cleanupNotification;
+//- (void)cleanupNotification;
 
 ///  负责配置Timer
 - (void)configureTimer;
