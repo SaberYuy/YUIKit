@@ -150,6 +150,10 @@ NSString * const kMVVMPrefixStr = @"mvvm";
         self.mainView.frame = [UIScreen mainScreen].bounds;
         self.view = self.mainView;
     }
+    else{
+        
+        [super loadView];
+    }
     
     [self performSelectorForArchitecture:_cmd withObject:nil];
 }
@@ -249,7 +253,7 @@ NSString * const kMVVMPrefixStr = @"mvvm";
     
     NSString *prefixStr = self.architectureName;
     
-    if(prefixStr && [prefixStr yui_isBlankString])
+    if(!prefixStr || [prefixStr yui_isBlankString])
         return;
     
     NSString *methodStr = NSStringFromSelector(selector);
