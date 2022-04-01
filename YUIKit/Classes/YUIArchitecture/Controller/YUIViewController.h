@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedInstance;
 
--(void)configureArchitecture:( ArchitectureType )architectureType;
+- (void)configureArchitecture:( ArchitectureType )architectureType;
 
 @end
 

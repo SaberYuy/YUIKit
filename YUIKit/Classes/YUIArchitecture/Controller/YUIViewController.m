@@ -249,7 +249,7 @@ NSString * const kMVVMPrefixStr = @"mvvm";
     
     NSString *prefixStr = self.architectureName;
     
-    if([prefixStr yui_isNullString])
+    if(prefixStr && [prefixStr yui_isBlankString])
         return;
     
     NSString *methodStr = NSStringFromSelector(selector);
