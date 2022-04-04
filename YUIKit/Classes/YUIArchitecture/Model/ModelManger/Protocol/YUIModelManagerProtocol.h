@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setData:(id)parameter;
 
 ///  从本类取值，作为通用接口
-- (id)getData:(id)parameter;
+- (nullable id)getData:(id)parameter;
 
 ///  Model上传至服务器
 - (void)uploadData:(nullable id)parameter;

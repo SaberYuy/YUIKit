@@ -47,7 +47,7 @@
 }
 
 //  从本类取值，作为通用接口
-- (id)getData:(id)parameter{
+- (nullable id)getData:(id)parameter{
     
     return nil;
 }
