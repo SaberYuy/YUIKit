@@ -14,7 +14,7 @@
 
 #pragma mark - init
 
-- (instancetype)init{
+- (instancetype)init {
     
     self = [super init];
     
@@ -25,21 +25,21 @@
     return self;
 }
 
-- (void)didInitialize{
+- (void)didInitialize {
     
     // Rewrite this func in SubClass !
 }
 
-- (__kindof UIView *)viewManagerOfManagerView{
+- (__kindof UIView *)viewManagerOfManagerView {
     
     return self.managerView;
 }
 
-- (UIViewController *)viewController{
+- (UIViewController *)viewController {
     
-    if(!_viewController){
+    if(!_viewController) {
         
-        if(_managerView){
+        if(_managerView) {
             
             UIResponder *next = [_managerView nextResponder];
             
@@ -63,18 +63,18 @@
 
 #pragma mark - <YUIViewDelegate>
 
-- (void)view:(__kindof UIView *)view withEvent:(NSDictionary *)event{
+- (void)view:(__kindof UIView *)view withEvent:(NSDictionary *)event {
     
 }
 
 #pragma mark ViewModelDelegate
 
-- (void)viewModel:(id)viewModel withInfo:(NSDictionary *)info{
+- (void)viewModel:(id)viewModel withInfo:(NSDictionary *)info {
     
 }
 
 /// 我觉得在上层一一绑定太过的繁琐，并且我觉得并不能很好的表达我的应用框架，所以我直接尝试在中层绑定，比起一一对应的理解上层绑定的关系，不如我直接在中层表达：如果你没有单独为viewManager添加他的viewManagerDelegate（它应该是一个viewModel），我将寻找下层视图的绑定情况，将代理给到他的父类的绑定
-- (id<YUIViewManagerDelegateProtocol>)viewManagerDelegate{
+- (id<YUIViewManagerDelegateProtocol>)viewManagerDelegate {
     
     if (_viewManagerDelegate == nil) {
         
@@ -95,7 +95,7 @@
                     break;
                 }
             }
-            else if([superView.viewDelegate isKindOfClass:[YUIViewModel class]] || ([superView.viewDelegate conformsToProtocol:@protocol(YUIViewModelProtocol)] && [superView.viewDelegate isKindOfClass:[NSObject class]])){
+            else if([superView.viewDelegate isKindOfClass:[YUIViewModel class]] || ([superView.viewDelegate conformsToProtocol:@protocol(YUIViewModelProtocol)] && [superView.viewDelegate isKindOfClass:[NSObject class]])) {
                 
                 NSObject <YUIViewModelProtocol>*superViewModel = (NSObject <YUIViewModelProtocol>*)superView.viewDelegate;
                 

@@ -20,7 +20,7 @@
  - PatternTypeMVP:
  - PatternTypeMVVM:
  */
-typedef NS_ENUM(NSInteger, ArchitectureType){
+typedef NS_ENUM(NSInteger, ArchitectureType) {
     
     ArchitectureTypeNone                 = 0,
     ArchitectureTypeMVC                  = 1,

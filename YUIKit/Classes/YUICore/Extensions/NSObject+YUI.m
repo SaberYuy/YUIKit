@@ -480,7 +480,7 @@ YUISynthesizeBOOLProperty(yui_shouldIgnoreUIKVCAccessProhibited, setYui_shouldIg
 //+ (void)load {
 //    if (@available(iOS 13.0, *)) {
 //        static dispatch_once_t onceToken;
-//        dispatch_once(&onceToken, ^{
+//        dispatch_once(&onceToken, ^ {
 //            OverrideImplementation(object_getClass([NSException class]), @selector(raise:format:), ^id(__unsafe_unretained Class originClass, SEL originCMD, IMP (^originalIMPProvider)(void)) {
 //                return ^(NSObject *selfObject, NSExceptionName raise, NSString *format, ...) {
 //                    

@@ -22,13 +22,13 @@
 + (instancetype)sharedInstance {
     static dispatch_once_t onceToken;
     static YUILogger *instance = nil;
-    dispatch_once(&onceToken,^{
+    dispatch_once(&onceToken,^ {
         instance = [[super allocWithZone:NULL] init];
     });
     return instance;
 }
 
-+ (id)allocWithZone:(struct _NSZone *)zone{
++ (id)allocWithZone:(struct _NSZone *)zone {
     return [self sharedInstance];
 }
 

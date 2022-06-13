@@ -10,12 +10,12 @@
 
 @implementation YUIExampleView
 
--(void)setupMainView{
+-(void)setupMainView {
     
     [self setBackgroundColor:[UIColor clearColor]];
 }
 
--(void)initSubviews{
+-(void)initSubviews {
     
     [super initSubviews];
     

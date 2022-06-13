@@ -16,7 +16,7 @@
 
 #pragma mark - init
 
-- (instancetype)init{
+- (instancetype)init {
     
     self = [super init];
     
@@ -27,7 +27,7 @@
     return self;
 }
 
-- (void)didInitialize{
+- (void)didInitialize {
     
     // Rewrite this func in SubClass !
 }
@@ -35,61 +35,61 @@
 #pragma mark - Data Interaction
 
 //  从本地或服务器加载数据Model
-- (void)loadData:(nullable id)parameter{
+- (void)loadData:(nullable id)parameter {
 
     // Rewrite this func in SubClass !
 }
 
 //  赋值至ModelManagar,作为通用赋值传值接口
-- (void)setData:(id)parameter{
+- (void)setData:(id)parameter {
     
     // Rewrite this func in SubClass !
 }
 
 //  从本类取值，作为通用接口
-- (nullable id)getData:(id)parameter{
+- (nullable id)getData:(id)parameter {
     
     return nil;
 }
 
 //  Model上传至服务器
-- (void)uploadData:(nullable id)parameter{
+- (void)uploadData:(nullable id)parameter {
 
     // Rewrite this func in SubClass !
 }
 
 //  从服务器下载数据
-- (void)downloadData:(nullable id)parameter{
+- (void)downloadData:(nullable id)parameter {
     
     // Rewrite this func in SubClass !
 }
 
 //  Model保存数据至服务器或本地
-- (void)saveData:(nullable id)parameter{
+- (void)saveData:(nullable id)parameter {
     
     // Rewrite this func in SubClass !
 }
 
 //  处理数据
-- (void)processData:(nullable id)parameter{
+- (void)processData:(nullable id)parameter {
     
     // Rewrite this func in SubClass !
 }
 
 //  刷新数据
-- (void)refreshData:(nullable id)parameter{
+- (void)refreshData:(nullable id)parameter {
     
     // Rewrite this func in SubClass !
 }
 
 //  重置数据
-- (void)restoreData:(nullable id)parameter{
+- (void)restoreData:(nullable id)parameter {
     
     // Rewrite this func in SubClass !
 }
 
 //  释放数据
-- (void)releaseData:(nullable id)parameter{
+- (void)releaseData:(nullable id)parameter {
     
     // Rewrite this func in SubClass !
 }
@@ -99,7 +99,7 @@
 //    unsigned int count = 0;
 //
 //    objc_property_t *properties = class_copyPropertyList([self class], &count);
-//    NSMutableDictionary *resultDict = [@{} mutableCopy];
+//    NSMutableDictionary *resultDict = [@ {} mutableCopy];
 //
 //    for (NSUInteger i = 0; i < count; i ++) {
 //

@@ -27,7 +27,7 @@
 
 - (void)noticeViewModelWithInfo:(NSDictionary *)info {
     
-    if([self.viewModel isKindOfClass:[YUIViewModel class]]){
+    if([self.viewModel isKindOfClass:[YUIViewModel class]]) {
         
         [(YUIViewModel *)self.viewModel setViewModelInfo:info];
     }
@@ -35,7 +35,7 @@
 
 - (void)noticeViewManagerWithInfo:(NSDictionary *)info {
     
-    if([self.viewManager isKindOfClass:[YUIViewManager class]]){
+    if([self.viewManager isKindOfClass:[YUIViewManager class]]) {
         
         [(YUIViewManager *)self.viewManager setViewManagerInfo:info];
     }

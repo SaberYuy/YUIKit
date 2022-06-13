@@ -27,7 +27,7 @@
 
 #pragma mark - init
 
-- (void)mvc_configureArchitectureWithBindingName:(NSString *)bindingName{
+- (void)mvc_configureArchitectureWithBindingName:(NSString *)bindingName {
     
     //  mainView
     Class mainViewClass = NSClassFromString([NSString stringWithFormat:@"%@View", bindingName]);
@@ -44,13 +44,13 @@
     }
 }
 
-//- (void)mvc_didInitialize{
+//- (void)mvc_didInitialize {
 //    
 //}
 
 #pragma mark - Lifecycle
 
-- (void)mvc_viewDidLoad{
+- (void)mvc_viewDidLoad {
     
     [self setupMainView];
     
@@ -61,23 +61,23 @@
     [self setupSubviewsConstraints];
 }
 
-- (void)mvc_configureBingding{
+- (void)mvc_configureBingding {
     
-    if(self.mainView){
+    if(self.mainView) {
 //        self.mainView.viewController = self;
-        if([self conformsToProtocol:@protocol(YUIViewDelegateProtocol)]){
+        if([self conformsToProtocol:@protocol(YUIViewDelegateProtocol)]) {
             
             self.mainView.viewDelegate = self;
         }
     }
 }
 
-- (void)mvc_viewDidLayoutSubviews{
+- (void)mvc_viewDidLayoutSubviews {
     
     [self setupSubviewsFrame];
 }
 
-- (void)mvc_dealloc{
+- (void)mvc_dealloc {
     
     [self cleanupObserver];
 }

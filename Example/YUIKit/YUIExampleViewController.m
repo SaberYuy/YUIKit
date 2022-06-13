@@ -15,17 +15,17 @@
 
 @implementation YUIExampleViewController
 
--(void)configureArchitecture{
+-(void)configureArchitecture {
     
     [super configureArchitecture:ArchitectureTypeMVC];
 }
 
-//-(void)setupMainView{
+//-(void)setupMainView {
 //    
 //    [super setupMainView]
 //}
 
--(void)initSubviews{
+-(void)initSubviews {
     
     [super initSubviews];
     

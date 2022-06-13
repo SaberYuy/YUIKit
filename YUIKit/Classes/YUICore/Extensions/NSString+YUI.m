@@ -284,24 +284,24 @@
     return [regex stringByReplacingMatchesInString:self options:NSMatchingReportCompletion range:NSMakeRange(0, self.length) withTemplate:replacement];
 }
 
-- (BOOL)yui_isBlankString{
+- (BOOL)yui_isBlankString {
     
-    if (![self isKindOfClass:[NSString class]] ){
+    if (![self isKindOfClass:[NSString class]] ) {
         return  YES;
     }
-    if ([self isEqual:[NSNull null]]){
+    if ([self isEqual:[NSNull null]]) {
         return  YES;
     }
-    if (self == NULL || [self isEqual:nil] || [self isEqual:Nil] || self == nil){
+    if (self == NULL || [self isEqual:nil] || [self isEqual:Nil] || self == nil) {
         return  YES;
     }
-    if([self isEqualToString:@"(null)"]){
+    if([self isEqualToString:@"(null)"]) {
         return  YES;
     }
-    if([self isEqualToString:@"<null>"]){
+    if([self isEqualToString:@"<null>"]) {
         return  YES;
     }
-    if (self.length == 0 || [[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] == 0){
+    if (self.length == 0 || [[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] == 0) {
         return  YES;
     }
     return NO;

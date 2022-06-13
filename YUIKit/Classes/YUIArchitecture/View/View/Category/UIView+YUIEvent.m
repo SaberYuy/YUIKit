@@ -71,12 +71,12 @@ YUISynthesizeIdCopyProperty(viewEventBlock, setViewEventBlock)
     }
 }
 
-//- (id<YUIViewModelDelegateProtocol>)viewModel{
+//- (id<YUIViewModelDelegateProtocol>)viewModel {
 //
 //    return objc_getAssociatedObject(self, _cmd);
 //}
 //
-//- (void)setViewModel:(id<YUIViewModelDelegateProtocol>)viewModel{
+//- (void)setViewModel:(id<YUIViewModelDelegateProtocol>)viewModel {
 //
 //    objc_setAssociatedObject(self, @selector(viewModel), viewModel, OBJC_ASSOCIATION_ASSIGN);
 //}

@@ -11,7 +11,7 @@
 
 #pragma mark - init
 
-- (instancetype)init{
+- (instancetype)init {
     
     self = [super init];
     
@@ -22,28 +22,28 @@
     return self;
 }
 
-- (void)didInitialize{
+- (void)didInitialize {
     
     // Rewrite this func in SubClass !
 }
 
 #pragma mark - <YUIViewControllerDelegateProtocol>
 
-- (void)viewController:(__kindof UIViewController *)viewController withInfo:(NSDictionary *)info{
+- (void)viewController:(__kindof UIViewController *)viewController withInfo:(NSDictionary *)info {
 
 }
 
 #pragma mark - <YUIViewManagerDelegate>
 
-- (void)viewManager:(id)viewManager withInfo:(NSDictionary *)info{
+- (void)viewManager:(id)viewManager withInfo:(NSDictionary *)info {
     
 }
 
 #pragma mark ViewManager Block
 
-- (ViewManagerInfoBlock)viewModelWithViewManagerBlockOfInfo:(NSDictionary *)info{
+- (ViewManagerInfoBlock)viewModelWithViewManagerBlockOfInfo:(NSDictionary *)info {
     
-    return ^{
+    return ^ {
       NSLog(@"hello");
     };
 }
@@ -56,7 +56,7 @@
 }
 
 //我很想写点什么，但很遗憾作为ViewModel离视图层比较远，无法通过subView进行补充
-//- (id<YUIViewModelDelegateProtocol>)viewModelDelegate{
+//- (id<YUIViewModelDelegateProtocol>)viewModelDelegate {
 //    
 //    return _viewModelDelegate;
 //}
@@ -89,7 +89,7 @@
 //        if (modelBlock) {
 //
 //            if (self.viewModelDelegate && [self.viewModelDelegate respondsToSelector:@selector(viewModel:withInfo:)]) {
-//                [self.viewModelDelegate viewModel:self withInfo:@{@"info" : @"呵呵， 你好， 我是ViewModel，我加载数据成功了"}];
+//                [self.viewModelDelegate viewModel:self withInfo:@ {@"info" : @"呵呵， 你好， 我是ViewModel，我加载数据成功了"}];
 //            }
 //            modelBlock([self getRandomData:responseObject]);
 //        }

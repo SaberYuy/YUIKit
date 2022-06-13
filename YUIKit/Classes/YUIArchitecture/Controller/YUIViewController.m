@@ -37,14 +37,14 @@ NSString * const kMVVMPrefixStr = @"mvvm";
 
 #pragma mark - init
 
-+ (instancetype)sharedInstance{
++ (instancetype)sharedInstance {
     
     //Singleton instance
     static YUIViewController *yuiVC;
     
     static dispatch_once_t onceToken;
     
-    dispatch_once(&onceToken, ^{
+    dispatch_once(&onceToken, ^ {
         
         yuiVC = [[self alloc] init];
     });
@@ -76,12 +76,12 @@ NSString * const kMVVMPrefixStr = @"mvvm";
     return self;
 }
 
-- (void)configureArchitecture{
+- (void)configureArchitecture {
     
     // Rewrite this func in SubClass !
 }
 
-- (void)configureArchitecture:(ArchitectureType)architectureType{
+- (void)configureArchitecture:(ArchitectureType)architectureType {
     
     self.architectureType = architectureType;
     
@@ -89,19 +89,19 @@ NSString * const kMVVMPrefixStr = @"mvvm";
     
     switch (architectureType) {
             
-        case ArchitectureTypeMVC:{
+        case ArchitectureTypeMVC: {
             temp = kMVCPrefixStr;
         }
             break;
-        case ArchitectureTypeMVP:{
+        case ArchitectureTypeMVP: {
             temp = kMVPPrefixStr;
         }
             break;
-        case ArchitectureTypeMVVM:{
+        case ArchitectureTypeMVVM: {
             temp = kMVVMPrefixStr;
         }
             break;
-        default:{
+        default: {
             return;
         }
             break;
@@ -110,7 +110,7 @@ NSString * const kMVVMPrefixStr = @"mvvm";
 }
 
 
-- (void)configureArchitectureWithArchitectureName:(NSString *)architectureName{
+- (void)configureArchitectureWithArchitectureName:(NSString *)architectureName {
     
     self.architectureName = architectureName;
     
@@ -125,7 +125,7 @@ NSString * const kMVVMPrefixStr = @"mvvm";
     [self performSelectorForArchitecture:tempSelector withObject:bindingName];
 }
 
-- (void)didInitialize{
+- (void)didInitialize {
     
     self.isFirstAppear = YES;
     
@@ -134,7 +134,7 @@ NSString * const kMVVMPrefixStr = @"mvvm";
     [self performSelectorForArchitecture:_cmd withObject:nil];
 }
 
-- (void)configureNotification{
+- (void)configureNotification {
     
     // Rewrite this func in SubClass !
 }
@@ -143,14 +143,14 @@ NSString * const kMVVMPrefixStr = @"mvvm";
 
 // loadView中只初始化view，一般用于创建比较关键的view如tableViewController的tabView，UINavigationController的navgationBar，不可掉用view的getter（在掉super loadView前），最好也不要初始化一些非关键的view。如果你是从nib文件中创建的viewController在这里一定要首先调用super的loadView方法，但建议不要重载这个方法。
 // 当访问UIViewController的view属性时，view如果此时是nil，那么VC会自动调用loadView方法来初始化一个UIView并赋值给view属性。此方法用在初始化关键view
-- (void)loadView{
+- (void)loadView {
     
-    if(self.mainView){
+    if(self.mainView) {
         
         self.mainView.frame = [UIScreen mainScreen].bounds;
         self.view = self.mainView;
     }
-    else{
+    else {
         
         [super loadView];
     }
@@ -167,7 +167,7 @@ NSString * const kMVVMPrefixStr = @"mvvm";
     [self performSelectorForArchitecture:_cmd withObject:nil];
 }
 
-- (void)configureBingding{
+- (void)configureBingding {
     
     [self performSelectorForArchitecture:_cmd withObject:nil];
 }
@@ -185,7 +185,7 @@ NSString * const kMVVMPrefixStr = @"mvvm";
 }
 
 // 一般用于显示前,对子控件进行更新布局
-- (void)viewWillLayoutSubviews{
+- (void)viewWillLayoutSubviews {
     
     [super viewWillLayoutSubviews];
     
@@ -197,7 +197,7 @@ NSString * const kMVVMPrefixStr = @"mvvm";
 // 当在self.view上的子控件的高度或者宽度改变时，会先执行- (void)viewWillLayoutSubviews，- (void)viewDidLayoutSubviews，然后执行子控件中的- (void)layoutSubviews。
 // 打开和收起键盘的时候
 // 添加视图的时候
-- (void)viewDidLayoutSubviews{
+- (void)viewDidLayoutSubviews {
     
     [super viewDidLayoutSubviews];
     
@@ -205,7 +205,7 @@ NSString * const kMVVMPrefixStr = @"mvvm";
 }
 
 // 一般用于显示后，在切换动画后，如果有需要的操作，可以在这里加入相关代码。
-- (void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
     
@@ -215,7 +215,7 @@ NSString * const kMVVMPrefixStr = @"mvvm";
     [self performSelectorForArchitecture:_cmd withObject:nil];
 }
 
-- (void)viewWillDisappear:(BOOL)animated{
+- (void)viewWillDisappear:(BOOL)animated {
     
     [super viewWillDisappear:animated];
     
@@ -224,14 +224,14 @@ NSString * const kMVVMPrefixStr = @"mvvm";
     [self performSelectorForArchitecture:_cmd withObject:nil];
 }
 
-- (void)viewDidDisappear:(BOOL)animated{
+- (void)viewDidDisappear:(BOOL)animated {
     
     [super viewDidDisappear:animated];
     
     [self performSelectorForArchitecture:_cmd withObject:nil];
 }
 
-- (void)dealloc{
+- (void)dealloc {
     
     //  If your app targets iOS 9.0 and later or macOS 10.11 and later, you don't need to unregister an observer in its dealloc method.
     //[self cleanupNotification];
@@ -239,7 +239,7 @@ NSString * const kMVVMPrefixStr = @"mvvm";
     [self performSelectorForArchitecture:_cmd withObject:nil];
 }
 
-- (void)cleanupNotification{
+- (void)cleanupNotification {
     
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
@@ -249,7 +249,7 @@ NSString * const kMVVMPrefixStr = @"mvvm";
 #pragma mark - event response
 #pragma mark - private methods
 
-- (void)performSelectorForArchitecture:(SEL)selector withObject:(id)object{
+- (void)performSelectorForArchitecture:(SEL)selector withObject:(id)object {
     
     NSString *prefixStr = self.architectureName;
     
@@ -259,7 +259,7 @@ NSString * const kMVVMPrefixStr = @"mvvm";
     NSString *methodStr = NSStringFromSelector(selector);
     SEL tempSelector = NSSelectorFromString([NSString stringWithFormat:@"%@_%@", prefixStr, methodStr]);
     
-    if([self respondsToSelector:tempSelector]){
+    if([self respondsToSelector:tempSelector]) {
         
         BeginIgnorePerformSelectorLeaksWarning
         [self performSelector:tempSelector withObject:object];
