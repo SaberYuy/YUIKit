@@ -257,7 +257,7 @@ NSString * const kMVVMPrefixStr = @"mvvm";
         return;
     
     NSString *methodStr = NSStringFromSelector(selector);
-    SEL tempSelector = NSSelectorFromString([NSString stringWithFormat:@"%@_%@",prefixStr,methodStr]);
+    SEL tempSelector = NSSelectorFromString([NSString stringWithFormat:@"%@_%@", prefixStr, methodStr]);
     
     if([self respondsToSelector:tempSelector]){
         

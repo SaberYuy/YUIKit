@@ -1,9 +1,9 @@
 //
 //  UIView+YUIEvent.m
-//  SUIMVVMDemo
+//  YUIAll
 //
-//  Created by yuantao on 16/3/5.
-//  Copyright © 2016年 lovemo. All rights reserved.
+//  Created by YUI on 16/3/5.
+//  Copyright © 2016年 SaberYuy. All rights reserved.
 //
 
 #import "UIView+YUIEvent.h"

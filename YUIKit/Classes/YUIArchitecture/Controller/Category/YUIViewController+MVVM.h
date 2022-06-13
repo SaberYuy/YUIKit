@@ -15,8 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YUIViewController (){
     
-    id <YUIViewModelProtocol> _viewModel;
-    id <YUIViewManagerProtocol> _viewManager;
+    id<YUIViewModelProtocol> _viewModel;
+    id<YUIViewManagerProtocol> _viewManager;
 }
 
 @property (nonatomic, strong) id<YUIViewModelProtocol> viewModel;

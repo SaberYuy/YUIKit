@@ -1,9 +1,9 @@
 //
 //  YUIMediator.m
-//  SUIMVVMDemo
+//  YUIAll
 //
-//  Created by yuantao on 16/4/15.
-//  Copyright © 2016年 lovemo. All rights reserved.
+//  Created by YUI on 16/4/15.
+//  Copyright © 2016年 SaberYuy. All rights reserved.
 //
 
 #import "YUIMediator.h"

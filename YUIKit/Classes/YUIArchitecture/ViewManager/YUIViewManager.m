@@ -101,7 +101,7 @@
                 
                 if ([superViewModel conformsToProtocol:@protocol(YUIViewManagerDelegateProtocol)]) {
                     
-                    self.viewManagerDelegate = (NSObject <YUIViewModelProtocol,YUIViewManagerDelegateProtocol>*) superViewModel;
+                    self.viewManagerDelegate = (NSObject <YUIViewModelProtocol, YUIViewManagerDelegateProtocol>*) superViewModel;
                     break;
                 }
             }

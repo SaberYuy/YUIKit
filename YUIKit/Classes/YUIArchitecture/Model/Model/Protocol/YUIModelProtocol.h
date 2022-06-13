@@ -56,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 //+ (NSDictionary *)JSONKeyPathsByPropertyKey;
-+ (NSDictionary<NSString *,id> *)modelCustomPropertyMapper;
++ (NSDictionary<NSString *, id> *)modelCustomPropertyMapper;
 
 + (NSDictionary *)modelContainerPropertyGenericClass;
 

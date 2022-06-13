@@ -30,12 +30,12 @@ typedef NS_ENUM(NSInteger, ArchitectureType){
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface YUIViewController : UIViewController<YUIViewControllerProtocol,YUIViewProtocol,YUIModelManagerProtocol,YUIViewDelegateProtocol,YUIViewControllerDelegateProtocol>
+@interface YUIViewController : UIViewController<YUIViewControllerProtocol, YUIViewProtocol, YUIModelManagerProtocol, YUIViewDelegateProtocol, YUIViewControllerDelegateProtocol>
 
 @property (nonatomic, assign) BOOL isFirstAppear;
 
 @property (nonatomic, strong) UIView <YUIViewProtocol> *mainView;
-@property (nonatomic, strong) id <YUIModelManagerProtocol> modelManager;
+@property (nonatomic, strong) id<YUIModelManagerProtocol> modelManager;
 @property (nullable, nonatomic, weak) id<YUIViewControllerDelegateProtocol> viewControllerDelegate;
 
 + (instancetype)sharedInstance;
