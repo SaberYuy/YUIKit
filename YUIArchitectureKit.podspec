@@ -25,7 +25,7 @@ s.homepage         = 'https://github.com/SaberYuy/YUIKit'
 # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'SaberYuy' => '750874701@qq.com' }
-s.source           = { :git => 'git@github.com:SaberYuy/YUIKit.git', :tag => s.version.to_s }
+s.source           = { :git => 'https://github.com/SaberYuy/YUIKit.git', :tag => s.version.to_s }
 # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
 s.ios.deployment_target = '10.0'
