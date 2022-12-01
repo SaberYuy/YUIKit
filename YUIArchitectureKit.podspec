@@ -28,7 +28,7 @@ s.author           = { 'SaberYuy' => '750874701@qq.com' }
 s.source           = { :git => 'https://github.com/SaberYuy/YUIKit.git', :tag => s.version.to_s }
 # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-s.ios.deployment_target = '10.0'
+s.ios.deployment_target = '11.0'
 s.frameworks       = 'Foundation', 'UIKit'
 # 组件源码文件配置路径
 s.source_files = 'YUIKit/Classes/YUIArchitectureKit.h'
