@@ -20,12 +20,12 @@
  - PatternTypeMVP:
  - PatternTypeMVVM:
  */
-typedef NS_ENUM(NSInteger, ArchitectureType) {
+typedef NS_ENUM(NSInteger, YUIArchitectureType) {
     
-    ArchitectureTypeNone                 = 0,
-    ArchitectureTypeMVC                  = 1,
-    ArchitectureTypeMVP                  = 2,
-    ArchitectureTypeMVVM                 = 3,
+    YUIArchitectureTypeNone                 = 0,
+    YUIArchitectureTypeMVC                  = 1,
+    YUIArchitectureTypeMVP                  = 2,
+    YUIArchitectureTypeMVVM                 = 3,
 };
 
 NS_ASSUME_NONNULL_BEGIN
@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedInstance;
 
-- (void)configureArchitecture:( ArchitectureType )architectureType;
+- (void)configureArchitecture:( YUIArchitectureType )architectureType;
 
 @end
 

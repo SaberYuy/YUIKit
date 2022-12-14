@@ -17,7 +17,7 @@
 
 -(void)configureArchitecture {
     
-    [super configureArchitecture:ArchitectureTypeMVC];
+    [super configureArchitecture: YUIArchitectureTypeMVC];
 }
 
 //-(void)setupMainView {

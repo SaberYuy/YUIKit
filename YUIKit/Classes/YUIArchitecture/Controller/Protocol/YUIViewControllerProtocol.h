@@ -15,9 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Architecture
 
-///  负责初始化设计架构，并且尝试创建、绑定上层应用架构部件
+///  负责初始化设计架构，并且尝试创建
 - (void)configureArchitecture;
-
+///  绑定上层应用架构部件
 - (void)configureBingding;
 
 

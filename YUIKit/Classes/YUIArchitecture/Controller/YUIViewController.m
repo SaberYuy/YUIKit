@@ -24,7 +24,7 @@
 
 @interface YUIViewController ()
 
-@property (nonatomic, assign) ArchitectureType architectureType;
+@property (nonatomic, assign) YUIArchitectureType architectureType;
 @property (nonatomic, copy) NSString *architectureName;
 
 @end
@@ -81,7 +81,7 @@ NSString * const kMVVMPrefixStr = @"mvvm";
     // Rewrite this func in SubClass !
 }
 
-- (void)configureArchitecture:(ArchitectureType)architectureType {
+- (void)configureArchitecture:(YUIArchitectureType)architectureType {
     
     self.architectureType = architectureType;
     
@@ -89,15 +89,15 @@ NSString * const kMVVMPrefixStr = @"mvvm";
     
     switch (architectureType) {
             
-        case ArchitectureTypeMVC: {
+        case YUIArchitectureTypeMVC: {
             temp = kMVCPrefixStr;
         }
             break;
-        case ArchitectureTypeMVP: {
+        case YUIArchitectureTypeMVP: {
             temp = kMVPPrefixStr;
         }
             break;
-        case ArchitectureTypeMVVM: {
+        case YUIArchitectureTypeMVVM: {
             temp = kMVVMPrefixStr;
         }
             break;
