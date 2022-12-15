@@ -35,6 +35,7 @@ NSString * const kMVVMPrefixStr = @"mvvm";
 
 @implementation YUIViewController
 
+
 #pragma mark - init
 
 + (instancetype)sharedInstance {
@@ -48,7 +49,6 @@ NSString * const kMVVMPrefixStr = @"mvvm";
         
         yuiVC = [[self alloc] init];
     });
-    
     return yuiVC;
 }
 
@@ -57,9 +57,6 @@ NSString * const kMVVMPrefixStr = @"mvvm";
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        
-        [self configureArchitecture];
-        
         [self didInitialize];
     }
     return self;
@@ -67,13 +64,21 @@ NSString * const kMVVMPrefixStr = @"mvvm";
 
 - (nullable instancetype)initWithCoder:(NSCoder *)aDecoder {
     
-    if (self = [super initWithCoder:aDecoder]) {
-        
-        [self configureArchitecture];
-        
+    if (self = [super initWithCoder:aDecoder]) {        
         [self didInitialize];
     }
     return self;
+}
+
+- (void)didInitialize {
+    
+    self.isFirstAppear = YES;
+    
+    [self configureArchitecture];
+    
+    [self configureNotification];
+    
+    [self performSelectorForArchitecture:_cmd withObject:nil];
 }
 
 - (void)configureArchitecture {
@@ -109,7 +114,6 @@ NSString * const kMVVMPrefixStr = @"mvvm";
     [self configureArchitectureWithArchitectureName:temp];
 }
 
-
 - (void)configureArchitectureWithArchitectureName:(NSString *)architectureName {
     
     self.architectureName = architectureName;
@@ -125,19 +129,11 @@ NSString * const kMVVMPrefixStr = @"mvvm";
     [self performSelectorForArchitecture:tempSelector withObject:bindingName];
 }
 
-- (void)didInitialize {
-    
-    self.isFirstAppear = YES;
-    
-    [self configureNotification];
-    
-    [self performSelectorForArchitecture:_cmd withObject:nil];
-}
-
 - (void)configureNotification {
     
     // Rewrite this func in SubClass !
 }
+
 
 #pragma mark - Lifecycle
 
@@ -151,10 +147,8 @@ NSString * const kMVVMPrefixStr = @"mvvm";
         self.view = self.mainView;
     }
     else {
-        
         [super loadView];
     }
-    
     [self performSelectorForArchitecture:_cmd withObject:nil];
 }
 
@@ -247,6 +241,8 @@ NSString * const kMVVMPrefixStr = @"mvvm";
 #pragma mark - ViewDelegate
 #pragma mark - CustomDelegate
 #pragma mark - event response
+
+
 #pragma mark - private methods
 
 - (void)performSelectorForArchitecture:(SEL)selector withObject:(id)object {
