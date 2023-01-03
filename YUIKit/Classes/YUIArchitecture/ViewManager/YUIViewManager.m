@@ -37,7 +37,10 @@
 
 - (UIViewController *)viewController {
     
-    if(!_viewController) {
+    if(_viewController) {
+        
+        return _viewController;
+    } else {
         
         if(_managerView) {
             
@@ -47,17 +50,14 @@
                 if ([next isKindOfClass:[UIViewController class]]) {
                     
                     _viewController = (UIViewController *)next;
-                    
                     return _viewController;
                 }
                 next = [next nextResponder];
             }
             while (next != nil);
-            
             return nil;
         }
     }
-    
     return nil;
 }
 
@@ -109,7 +109,6 @@
             superView = superView.superview;
         }
     }
-    
     return _viewManagerDelegate;
 }
 
