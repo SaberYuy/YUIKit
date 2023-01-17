@@ -1,6 +1,6 @@
 //
 //  YUIMediator.h
-//  YUIAll
+//  YUIKit
 //
 //  Created by YUI on 16/4/15.
 //  Copyright © 2016年 SaberYuy. All rights reserved.

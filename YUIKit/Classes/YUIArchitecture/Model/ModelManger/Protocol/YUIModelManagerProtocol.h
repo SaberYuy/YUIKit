@@ -1,6 +1,6 @@
 //
 //  YUIModelManagerSubclassingHooksProtocol.h
-//  YUIAll
+//  YUIKit
 //
 //  Created by YUI on 2021/2/22.
 //

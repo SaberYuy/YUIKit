@@ -1,6 +1,6 @@
 //
 //  YUIViewModel.m
-//  YUIAll
+//  YUIKit
 //
 //  Created by YUI on 2021/2/21.
 //
@@ -29,13 +29,13 @@
 
 #pragma mark - <YUIViewControllerDelegateProtocol>
 
-- (void)viewController:(__kindof UIViewController *)viewController withInfo:(NSDictionary *)info {
-
+- (void)receiveViewController:(__kindof UIViewController *)viewController name:(NSString *)name userInfo:(NSDictionary *)userInfo {
+    
 }
 
 #pragma mark - <YUIViewManagerDelegate>
 
-- (void)viewManager:(id)viewManager withInfo:(NSDictionary *)info {
+- (void)receiveViewManager:(id)viewManager name:(NSString *)name userInfo:(NSDictionary *)userInfo {
     
 }
 
@@ -52,7 +52,7 @@
 
 - (void)notice {
     
-//    [self.mediator noticeViewManagerWithInfo:self.viewModelInfo];
+//    [self.mediator noticeViewManagerinfo:self.viewModelInfo];
 }
 
 //我很想写点什么，但很遗憾作为ViewModel离视图层比较远，无法通过subView进行补充
@@ -88,8 +88,8 @@
 //    [self viewModelWithProgress:nil success:^(id responseObject) {
 //        if (modelBlock) {
 //
-//            if (self.viewModelDelegate && [self.viewModelDelegate respondsToSelector:@selector(viewModel:withInfo:)]) {
-//                [self.viewModelDelegate viewModel:self withInfo:@ {@"info" : @"呵呵， 你好， 我是ViewModel，我加载数据成功了"}];
+//            if (self.viewModelDelegate && [self.viewModelDelegate respondsToSelector:@selector(viewModel:info:)]) {
+//                [self.viewModelDelegate viewModel:self info:@ {@"info" : @"呵呵， 你好， 我是ViewModel，我加载数据成功了"}];
 //            }
 //            modelBlock([self getRandomData:responseObject]);
 //        }

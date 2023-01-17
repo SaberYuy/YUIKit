@@ -336,12 +336,12 @@
 
 @implementation NSObject (YUI_DataBind)
 
-static char kAssociatedObjectKey_YUIAllBoundObjects;
+static char kAssociatedObjectKey_YUIKitBoundObjects;
 - (NSMutableDictionary<id, id> *)yui_allBoundObjects {
-    NSMutableDictionary<id, id> *dict = objc_getAssociatedObject(self, &kAssociatedObjectKey_YUIAllBoundObjects);
+    NSMutableDictionary<id, id> *dict = objc_getAssociatedObject(self, &kAssociatedObjectKey_YUIKitBoundObjects);
     if (!dict) {
         dict = [NSMutableDictionary dictionary];
-        objc_setAssociatedObject(self, &kAssociatedObjectKey_YUIAllBoundObjects, dict, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        objc_setAssociatedObject(self, &kAssociatedObjectKey_YUIKitBoundObjects, dict, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return dict;
 }

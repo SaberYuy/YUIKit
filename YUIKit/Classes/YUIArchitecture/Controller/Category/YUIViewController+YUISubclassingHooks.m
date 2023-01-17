@@ -1,6 +1,6 @@
 //
 //  YUIViewController+YUISubclassingHooks.m
-//  YUIAll
+//  YUIKit
 //
 //  Created by YUI on 2021/2/4.
 //
@@ -104,19 +104,13 @@
 
 #pragma mark - <YUIViewControllerDelegateProtocol>
 
-- (void)viewController:(__kindof UIViewController *)viewController withInfo:(NSDictionary *)info {
+- (void)receiveViewController:(__kindof UIViewController *)viewController name:(NSString *)name userInfo:(NSDictionary *)userInfo {
     
 }
 
 #pragma mark - <YUIViewDelegateProtocol>
 
-- (void)view:(__kindof UIView *)view withEvent:(NSDictionary *)event {
-    
-}
-
-#pragma mark - <YUIViewModelDelegateProtocol>
-
-- (void)viewModel:(id)viewModel withInfo:(NSDictionary *)info {
+- (void)receiveView:(UIView *)view name:(NSString *)name event:(NSDictionary *)event {
     
 }
 

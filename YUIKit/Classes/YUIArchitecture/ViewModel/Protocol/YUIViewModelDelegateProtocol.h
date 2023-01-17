@@ -1,6 +1,6 @@
 //
 //  YUIViewModelProtocol.h
-//  YUIAll
+//  YUIKit
 //
 //  Created by YUI on 2021/2/21.
 //
@@ -13,14 +13,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 
-/**
- *  将viewModel中的信息通过代理传递给ViewManager
- *
- *  @param viewModel   viewModel自己
- *  @param info 描述信息
- */
-- (void)viewModel:(id)viewModel withInfo:(NSDictionary *)info;
+/// 将viewmodel中的信息通过代理传递给ViewManager
+/// - Parameters:
+///   - viewModel: 发送viewmodel
+///   - name: 调用消息名
+///   - info: 信息
+- (void)receiveViewModel:(id)viewModel name:(NSString *)name userInfo:(NSDictionary *)userInfo;
 
 @end
 
 NS_ASSUME_NONNULL_END
+
+

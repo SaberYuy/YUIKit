@@ -1,6 +1,6 @@
 //
 //  YUIViewManager.m
-//  YUIAll
+//  YUIKit
 //
 //  Created by YUI on 2021/2/21.
 //
@@ -61,15 +61,15 @@
     return nil;
 }
 
-#pragma mark - <YUIViewDelegate>
+#pragma mark - <YUIViewProtocol>
 
-- (void)view:(__kindof UIView *)view withEvent:(NSDictionary *)event {
+- (void)receiveView:(UIView *)view name:(NSString *)name event:(NSDictionary *)event {
     
 }
 
-#pragma mark ViewModelDelegate
+#pragma mark - <YUIViewModelProtocol>
 
-- (void)viewModel:(id)viewModel withInfo:(NSDictionary *)info {
+- (void)receiveViewModel:(id)viewModel name:(NSString *)name userInfo:(NSDictionary *)userInfo {
     
 }
 
@@ -105,7 +105,6 @@
                     break;
                 }
             }
-            
             superView = superView.superview;
         }
     }

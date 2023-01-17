@@ -1,6 +1,6 @@
 //
 //  YUIView.h
-//  YUIAll
+//  YUIKit
 //
 //  Created by YUI on 2021/3/22.
 //

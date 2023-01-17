@@ -1,6 +1,6 @@
 //
 //  UIView+YUIEvent.m
-//  YUIAll
+//  YUIKit
 //
 //  Created by YUI on 16/3/5.
 //  Copyright © 2016年 SaberYuy. All rights reserved.

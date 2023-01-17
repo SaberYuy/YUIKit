@@ -1,6 +1,6 @@
 //
 //  YUIViewController.m
-//  YUIAll
+//  YUIKit
 //
 //  Created by YUI on 2020/11/17.
 //

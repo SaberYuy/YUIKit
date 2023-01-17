@@ -1,6 +1,6 @@
 //
 //  YUIViewController+MVVM.m
-//  YUIAll
+//  YUIKit
 //
 //  Created by YUI on 2020/12/14.
 //
@@ -128,6 +128,11 @@
 //#pragma mark - UITableViewDelegate
 #pragma mark - ViewDelegate
 #pragma mark - CustomDelegate
+
+-(void)receiveViewModel:(id)viewModel name:(NSString *)name userInfo:(NSDictionary *)userInfo {
+    
+}
+
 #pragma mark - event response
 #pragma mark - private methods
 #pragma mark - getters and setters
