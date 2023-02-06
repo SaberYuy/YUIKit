@@ -25,7 +25,7 @@
     Class mainViewClass = NSClassFromString([NSString stringWithFormat:@"%@View", bindingName]);
     if (mainViewClass != NULL && [mainViewClass conformsToProtocol:@protocol(YUIViewProtocol)]) {
         
-        self.mainView = [mainViewClass new];
+        self.contentView = [mainViewClass new];
     }
     
     //  ViewModel
@@ -63,17 +63,17 @@
 //不可直接在分类中使用定义的同名子类继承的方法
 - (void)mvvm_configureBingding {
     
-    if(self.mainView && self.viewModel && self.viewManager) {
+    if(self.contentView && self.viewModel && self.viewManager) {
         
         //  绑定viewManager与view
         if([self.viewManager conformsToProtocol:@protocol(YUIViewDelegateProtocol)]) {
             
-            [self.mainView viewWithViewManager:(NSObject<YUIViewDelegateProtocol>*)self.viewManager];
+            [self.contentView viewWithViewManager:(NSObject<YUIViewDelegateProtocol>*)self.viewManager];
         }
         if([self.viewManager isKindOfClass:[YUIViewManager class]]) {
             
             YUIViewManager *yuiViewManager = (YUIViewManager *)self.viewManager;
-            yuiViewManager.managerView = self.mainView;
+            yuiViewManager.managerView = self.contentView;
             yuiViewManager.viewController = self;
         }
         
@@ -88,11 +88,11 @@
         }
     }
     //不使用viewManager，通常绑定，将mainView绑定controller，viewModel绑定controller，理解上可以将mainView直接绑定viewModel，但是缺失了一个通过controller互相切换绑定的结点
-    else if(self.mainView && self.viewModel && !self.viewManager) {
+    else if(self.contentView && self.viewModel && !self.viewManager) {
         
         if([self conformsToProtocol:@protocol(YUIViewDelegateProtocol)]) {
             
-            self.mainView.viewDelegate = self;
+            self.contentView.viewDelegate = self;
         }
         if([self.viewModel isKindOfClass:[YUIViewModel class]]) {
             

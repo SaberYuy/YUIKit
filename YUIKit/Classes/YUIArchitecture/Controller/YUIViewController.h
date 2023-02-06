@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) BOOL isFirstAppear;
 
-@property (nonatomic, strong) UIView <YUIViewProtocol> *mainView;
+@property (nonatomic, strong) UIView <YUIViewProtocol> *contentView;
 @property (nonatomic, strong) id<YUIModelManagerProtocol> modelManager;
 @property (nullable, nonatomic, weak) id<YUIViewControllerDelegateProtocol> viewControllerDelegate;
 

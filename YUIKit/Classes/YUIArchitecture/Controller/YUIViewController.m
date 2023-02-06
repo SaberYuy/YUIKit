@@ -141,10 +141,10 @@ NSString * const kMVVMPrefixStr = @"mvvm";
 // 当访问UIViewController的view属性时，view如果此时是nil，那么VC会自动调用loadView方法来初始化一个UIView并赋值给view属性。此方法用在初始化关键view
 - (void)loadView {
     
-    if(self.mainView) {
+    if(self.contentView) {
         
-        self.mainView.frame = [UIScreen mainScreen].bounds;
-        self.view = self.mainView;
+        self.contentView.frame = [UIScreen mainScreen].bounds;
+        self.view = self.contentView;
     }
     else {
         [super loadView];

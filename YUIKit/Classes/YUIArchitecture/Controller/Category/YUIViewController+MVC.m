@@ -33,7 +33,7 @@
     Class mainViewClass = NSClassFromString([NSString stringWithFormat:@"%@View", bindingName]);
     if (mainViewClass != NULL && [mainViewClass conformsToProtocol:@protocol(YUIViewProtocol)]) {
         
-        self.mainView = [mainViewClass new];
+        self.contentView = [mainViewClass new];
     }
     
     //  ModelManager
@@ -63,11 +63,11 @@
 
 - (void)mvc_configureBingding {
     
-    if(self.mainView) {
+    if(self.contentView) {
 //        self.mainView.viewController = self;
         if([self conformsToProtocol:@protocol(YUIViewDelegateProtocol)]) {
             
-            self.mainView.viewDelegate = self;
+            self.contentView.viewDelegate = self;
         }
     }
 }
