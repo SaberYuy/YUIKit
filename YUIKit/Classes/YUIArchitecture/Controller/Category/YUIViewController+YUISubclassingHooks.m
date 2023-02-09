@@ -33,7 +33,7 @@
 
 #pragma mark - <YUIViewProtocol>
 
-- (void)setupMainView {
+- (void)setupContainerView {
     // Rewrite this func in SubClass !
 }
 

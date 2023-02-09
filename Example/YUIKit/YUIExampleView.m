@@ -10,7 +10,7 @@
 
 @implementation YUIExampleView
 
--(void)setupMainView {
+-(void)setupContainerView {
     
     [self setBackgroundColor:[UIColor clearColor]];
 }

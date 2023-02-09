@@ -13,7 +13,7 @@
     // Rewrite this func in SubClass !
 }
 
-- (void)setupMainView {
+- (void)setupContainerView {
     // Rewrite this func in SubClass !
 }
 

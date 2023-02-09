@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)didInitialize;
 
-- (void)setupMainView;
+- (void)setupContainerView;
 
 - (void)initSubviews;
 

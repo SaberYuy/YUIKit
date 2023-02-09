@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)didInitialize;
 
 /// 负责设置最底部主视图
-- (void)setupMainView;
+- (void)setupContainerView;
 
 /// 负责初始化子视图
 - (void)initSubviews;

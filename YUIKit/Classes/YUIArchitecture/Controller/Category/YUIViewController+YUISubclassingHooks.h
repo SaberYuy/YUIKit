@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - <YUIViewProtocol>
 
 //// 负责设置self.view，某些解耦方案中会直接替换self.view。
-- (void)setupMainView NS_REQUIRES_SUPER;
+- (void)setupContainerView NS_REQUIRES_SUPER;
 
 /**
  *  负责初始化和设置controller里面的view，也就是self.view的subView。目的在于分类代码，所以与view初始化的相关代码都写在这里。

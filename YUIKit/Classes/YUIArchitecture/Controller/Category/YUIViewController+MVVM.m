@@ -21,11 +21,11 @@
 
 - (void)mvvm_configureArchitectureWithBindingName:(NSString *)bindingName {
     
-    //  mainView
-    Class mainViewClass = NSClassFromString([NSString stringWithFormat:@"%@View", bindingName]);
-    if (mainViewClass != NULL && [mainViewClass conformsToProtocol:@protocol(YUIViewProtocol)]) {
+    //  containerView
+    Class containerViewClass = NSClassFromString([NSString stringWithFormat:@"%@View", bindingName]);
+    if (containerViewClass != NULL && [containerViewClass conformsToProtocol:@protocol(YUIViewProtocol)]) {
         
-        self.contentView = [mainViewClass new];
+        self.containerView = [containerViewClass new];
     }
     
     //  ViewModel
@@ -51,7 +51,7 @@
 
 - (void)mvvm_viewDidLoad {
     
-    [self setupMainView];
+    [self setupContainerView];
     
     [self initSubviews];
     
@@ -63,17 +63,17 @@
 //不可直接在分类中使用定义的同名子类继承的方法
 - (void)mvvm_configureBingding {
     
-    if(self.contentView && self.viewModel && self.viewManager) {
+    if(self.containerView && self.viewModel && self.viewManager) {
         
         //  绑定viewManager与view
         if([self.viewManager conformsToProtocol:@protocol(YUIViewDelegateProtocol)]) {
             
-            [self.contentView viewWithViewManager:(NSObject<YUIViewDelegateProtocol>*)self.viewManager];
+            [self.containerView viewWithViewManager:(NSObject<YUIViewDelegateProtocol>*)self.viewManager];
         }
         if([self.viewManager isKindOfClass:[YUIViewManager class]]) {
             
             YUIViewManager *yuiViewManager = (YUIViewManager *)self.viewManager;
-            yuiViewManager.managerView = self.contentView;
+            yuiViewManager.managerView = self.containerView;
             yuiViewManager.viewController = self;
         }
         
@@ -87,12 +87,12 @@
             [(YUIViewManager *)self.viewManager setViewManagerDelegate:(id<YUIViewManagerDelegateProtocol>)self.viewModel];
         }
     }
-    //不使用viewManager，通常绑定，将mainView绑定controller，viewModel绑定controller，理解上可以将mainView直接绑定viewModel，但是缺失了一个通过controller互相切换绑定的结点
-    else if(self.contentView && self.viewModel && !self.viewManager) {
+    //不使用viewManager，通常绑定，将containerView绑定controller，viewModel绑定controller，理解上可以将containerView直接绑定viewModel，但是缺失了一个通过controller互相切换绑定的结点
+    else if(self.containerView && self.viewModel && !self.viewManager) {
         
         if([self conformsToProtocol:@protocol(YUIViewDelegateProtocol)]) {
             
-            self.contentView.viewDelegate = self;
+            self.containerView.viewDelegate = self;
         }
         if([self.viewModel isKindOfClass:[YUIViewModel class]]) {
             

@@ -18,7 +18,7 @@
     if (self = [super initWithFrame:frame]) {
         
         [self didInitialize];
-        [self setupMainView];
+        [self setupContainerView];
         [self initSubviews];
         [self setupSubviewsConstraints];
     }
@@ -30,7 +30,7 @@
     if (self = [super initWithCoder:aDecoder]) {
         
         [self didInitialize];
-        [self setupMainView];
+        [self setupContainerView];
         [self initSubviews];
         [self setupSubviewsConstraints];
     }

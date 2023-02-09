@@ -29,11 +29,11 @@
 
 - (void)mvc_configureArchitectureWithBindingName:(NSString *)bindingName {
     
-    //  mainView
-    Class mainViewClass = NSClassFromString([NSString stringWithFormat:@"%@View", bindingName]);
-    if (mainViewClass != NULL && [mainViewClass conformsToProtocol:@protocol(YUIViewProtocol)]) {
+    //  containerView
+    Class containerViewClass = NSClassFromString([NSString stringWithFormat:@"%@View", bindingName]);
+    if (containerViewClass != NULL && [containerViewClass conformsToProtocol:@protocol(YUIViewProtocol)]) {
         
-        self.contentView = [mainViewClass new];
+        self.containerView = [containerViewClass new];
     }
     
     //  ModelManager
@@ -52,7 +52,7 @@
 
 - (void)mvc_viewDidLoad {
     
-    [self setupMainView];
+    [self setupContainerView];
     
     [self initSubviews];
     
@@ -63,11 +63,11 @@
 
 - (void)mvc_configureBingding {
     
-    if(self.contentView) {
-//        self.mainView.viewController = self;
+    if(self.containerView) {
+//        self.containerView.viewController = self;
         if([self conformsToProtocol:@protocol(YUIViewDelegateProtocol)]) {
             
-            self.contentView.viewDelegate = self;
+            self.containerView.viewDelegate = self;
         }
     }
 }

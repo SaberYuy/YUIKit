@@ -20,9 +20,9 @@
     [super configureArchitecture: YUIArchitectureTypeMVC];
 }
 
-//-(void)setupMainView {
+//-(void)setupContainerView {
 //    
-//    [super setupMainView]
+//    [super setupContainerView]
 //}
 
 -(void)initSubviews {
