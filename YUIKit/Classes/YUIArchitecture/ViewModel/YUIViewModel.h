@@ -23,11 +23,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, weak) id<YUIViewModelDelegateProtocol> viewModelDelegate;
 
 /**
- *  ViewModelInfoBlock
- */
-@property (nonatomic, copy) ViewModelInfoBlock viewModelInfoBlock;
-
-/**
  *  viewModelInfo
  */
 @property (nonatomic, copy) NSDictionary *viewModelInfo;

@@ -73,7 +73,7 @@
         if([self.viewManager isKindOfClass:[YUIViewManager class]]) {
             
             YUIViewManager *yuiViewManager = (YUIViewManager *)self.viewManager;
-            yuiViewManager.managerView = self.containerView;
+            yuiViewManager.managementView = self.containerView;
             yuiViewManager.viewController = self;
         }
         

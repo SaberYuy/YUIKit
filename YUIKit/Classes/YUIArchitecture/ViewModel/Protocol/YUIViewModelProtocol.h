@@ -41,8 +41,6 @@ typedef void (^ViewModelInfoBlock)(void);
 
 @optional
 
-- (void)notice;
-
 /**
  *  返回指定viewModel的所引用的控制器
  */
@@ -57,16 +55,6 @@ typedef void (^ViewModelInfoBlock)(void);
  *  传递模型给view
  */
 - (void)viewModelWithModelBlcok:(void (^)(id model))modelBlock;
-
-/**
- *  处理ViewManagerInfoBlock
- */
-- (ViewManagerInfoBlock)viewModelWithViewManagerBlockOfInfo:(NSDictionary *)info;
-
-/**
- *  处理ViewModelInfoBlock
- */
-- (ViewModelInfoBlock)viewModelWithOtherViewModelBlockOfInfo:(NSDictionary *)info;
 
 
 @end

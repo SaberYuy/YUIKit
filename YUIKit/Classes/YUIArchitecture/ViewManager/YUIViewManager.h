@@ -17,16 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YUIViewManager : NSObject <YUIViewManagerProtocol, YUIViewDelegateProtocol, YUIViewModelDelegateProtocol>
 
-@property (nonatomic, weak) UIView *managerView;
+@property (nonatomic, weak) UIView *managementView;
 
 @property (nonatomic, weak) UIViewController *viewController;
 
 @property (nullable, nonatomic, weak) id<YUIViewManagerDelegateProtocol> viewManagerDelegate;
-
-/**
- *  ViewManagerInfoBlock
- */
-@property (nonatomic, copy) ViewManagerInfoBlock viewManagerInfoBlock;
 
 /**
  *  viewManagerInfo

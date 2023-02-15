@@ -30,9 +30,9 @@
     // Rewrite this func in SubClass !
 }
 
-- (__kindof UIView *)viewManagerOfManagerView {
+- (__kindof UIView *)managementViewOfManager {
     
-    return self.managerView;
+    return self.managementView;
 }
 
 - (UIViewController *)viewController {
@@ -42,9 +42,9 @@
         return _viewController;
     } else {
         
-        if(_managerView) {
+        if(_managementView) {
             
-            UIResponder *next = [_managerView nextResponder];
+            UIResponder *next = [_managementView nextResponder];
             
             do {
                 if ([next isKindOfClass:[UIViewController class]]) {
@@ -79,7 +79,7 @@
     if (_viewManagerDelegate == nil) {
         
         //try get from superview, lazy get
-        UIView* superView = self.managerView.superview;
+        UIView* superView = self.managementView.superview;
         while (superView != nil) {
             
             if (!superView.viewDelegate)
