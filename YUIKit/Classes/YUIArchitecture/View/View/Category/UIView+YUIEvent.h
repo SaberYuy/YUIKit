@@ -13,8 +13,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^ViewEventBlock)( void);
-
 @interface UIView (YUIEvent)
 
 /**
@@ -29,16 +27,6 @@ typedef void (^ViewEventBlock)( void);
 
 ///view 引用viewModel ，但反过来不行（即不要在viewModel中引入#import UIKit.h，任何视图本身的引用都不应该放在viewModel中）
 @property (nullable, nonatomic, weak) id<YUIViewModelDelegateProtocol> viewModel;
-
-/**
- *  block 传递事件
- */
-@property (nonatomic, copy) ViewEventBlock viewEventBlock;
-
-/**
- *  将view中的事件交由viewManager处理
- */
-- (void)viewWithViewManager:(id<YUIViewDelegateProtocol>)viewManager;
 
 @end
 

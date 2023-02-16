@@ -23,11 +23,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, weak) id<YUIViewManagerDelegateProtocol> viewManagerDelegate;
 
-/**
- *  viewManagerInfo
- */
-@property (nonatomic, copy) NSDictionary *viewManagerInfo;
-
 @end
 
 NS_ASSUME_NONNULL_END

@@ -29,6 +29,8 @@
     
     [super initSubviews];
     
+    [self.view setViewDelegate:nil];
+    
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake( 100, 100, 100, 100)];
     [btn setBackgroundColor:[UIColor yellowColor]];
     [self.view addSubview:btn];

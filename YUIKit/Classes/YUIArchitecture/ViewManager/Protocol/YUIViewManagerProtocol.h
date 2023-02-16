@@ -10,19 +10,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^ViewEventBlock)(void);
-
-/**
- *  将自己的信息返回给ViewModel的block
- */
-typedef void (^ViewModelInfoBlock)(void);
-
-/**
- *  将自己的信息返回给ViewManager的block
- */
-typedef void (^ViewManagerInfoBlock)(void);
-
-
 @protocol YUIViewManagerProtocol <NSObject>
 
 @optional
@@ -37,7 +24,6 @@ typedef void (^ViewManagerInfoBlock)(void);
  *  @return viewManager所管理的视图
  */
 - (__kindof UIView *)managementViewOfManager;
-
 
 @end
 

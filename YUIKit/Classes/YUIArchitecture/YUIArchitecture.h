@@ -26,6 +26,5 @@
 #import "YUIViewController+MVC.h"
 #import "YUIViewController+MVVM.h"
 #import "YUIViewController+MVP.h"
-#import "YUIMediator.h"
 
 #endif /* YUIArchitecture_h */

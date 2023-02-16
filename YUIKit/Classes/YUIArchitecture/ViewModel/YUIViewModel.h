@@ -17,15 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YUIViewModel : NSObject<YUIViewModelProtocol, YUIViewControllerDelegateProtocol, YUIViewManagerDelegateProtocol>
 
-/**
- *  viewModelDelegate
- */
 @property (nullable, nonatomic, weak) id<YUIViewModelDelegateProtocol> viewModelDelegate;
-
-/**
- *  viewModelInfo
- */
-@property (nonatomic, copy) NSDictionary *viewModelInfo;
 
 @end
 

@@ -65,12 +65,6 @@ YUISynthesizeIdCopyProperty(viewEventBlock, setViewEventBlock)
     objc_setAssociatedObject(self, @selector(viewDelegate), viewDelegate, OBJC_ASSOCIATION_ASSIGN);
 }
 
-- (void)viewWithViewManager:(id<YUIViewDelegateProtocol>)viewManager {
-    if (viewManager) {
-        self.viewDelegate = viewManager;
-    }
-}
-
 //- (id<YUIViewModelDelegateProtocol>)viewModel {
 //
 //    return objc_getAssociatedObject(self, _cmd);

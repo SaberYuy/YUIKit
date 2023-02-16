@@ -12,7 +12,6 @@
 
 #import "YUIArchitectureKit.h"
 #import "YUIArchitecture.h"
-#import "YUIMediator.h"
 #import "YUIViewController.h"
 #import "YUIViewManager.h"
 #import "YUIViewModel.h"

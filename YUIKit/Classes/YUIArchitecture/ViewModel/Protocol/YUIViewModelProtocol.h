@@ -23,39 +23,17 @@ typedef void (^failureBlock) (NSError *error);
 /**
  *  请求响应block
  */
-typedef void (^responseBlock)(id dataObj, NSError *error);
+typedef void (^responseBlock)(id responseObject, NSError *error);
 /**
  *  监听进度响应block
  */
 typedef void (^progressBlock)(NSProgress * progress);
-/**
- *  将自己的信息返回给ViewManager的block
- */
-typedef void (^ViewManagerInfoBlock)(void);
-/**
- *  将自己的信息返回给ViewModel的block
- */
-typedef void (^ViewModelInfoBlock)(void);
 
 @protocol YUIViewModelProtocol <YUIModelManagerProtocol>
 
 @optional
 
-/**
- *  返回指定viewModel的所引用的控制器
- */
-- (void)viewModelWithViewController:(UIViewController *)viewController;
-
-/**
- *  加载数据
- */
-- (NSURLSessionTask *)viewModelWithProgress:(nullable progressBlock)progress success:(nullable successBlock)success failure:(nullable failureBlock)failure;
-
-/**
- *  传递模型给view
- */
-- (void)viewModelWithModelBlcok:(void (^)(id model))modelBlock;
-
+-(void)loadData:(nullable progressBlock)progress success:(nullable successBlock)success failure:(nullable failureBlock)failure;
 
 @end
 

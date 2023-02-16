@@ -47,14 +47,12 @@
 		7B7F7A9C7748977A557920077FBC19CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
 		872035469E64A830DB6B190E0A26980A /* YUIArchitecture.h in Headers */ = {isa = PBXBuildFile; fileRef = C864C84D3A96E6E084AB58ED462F10DC /* YUIArchitecture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		87F75CC2FEA70DAB973DC8BB4EDAA93C /* YUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D37A5DD34BC1CC32E6AB372D42DF6669 /* YUIViewController.m */; };
-		8EDA5322A53E19F9A1665AB3C8308E02 /* YUIMediator.h in Headers */ = {isa = PBXBuildFile; fileRef = 9699FE2F4C69E44CBB25631AF416013C /* YUIMediator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8EE7137678F1DF222F92D9AFAFA8C261 /* YUIViewController+MVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C2B176ACAA5A293A1ABED424FC1CA5 /* YUIViewController+MVC.m */; };
 		916ADEAC1475F4A0A25639056A689DBC /* YUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4DE41C3342DFD30BD507709D215CE5 /* YUIView.m */; };
 		96498124B4E1DD5A6C61D2D77BA4FD8C /* UIView+YUISubclassingHooks.h in Headers */ = {isa = PBXBuildFile; fileRef = 716A85150F8817BA2F121FA59FAA72A7 /* UIView+YUISubclassingHooks.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D9002A823B870FEC6BFC70804A7E1DA /* YUILogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 31B543B6AF01AACDB11005FE21181E4B /* YUILogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6AD7024A5CD2BF75F7E1F9A0EB1FF4E /* YUILogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B83911D532F20A53F43B3BEC979F34 /* YUILogger.m */; };
 		A6BF7073402B2546D973CD51BF66CD49 /* YUILab.h in Headers */ = {isa = PBXBuildFile; fileRef = CF3A398C7B7058B45908BF04AFBBB0B6 /* YUILab.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A72D61CF7FF10A193BC3C01D0E55E9EB /* YUIMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C9404391C867FEC08405DB265471CE /* YUIMediator.m */; };
 		AA080AF2ECECC5FCFD3F505FC0ADB098 /* NSArray+YUI.h in Headers */ = {isa = PBXBuildFile; fileRef = A20257A08953C78363E89DF941D53C84 /* NSArray+YUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD6C49D1F8BA859BF569E350BF2ACCBC /* YUIViewControllerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F22C1596181A22BEC8B7847D58D1C05 /* YUIViewControllerProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF39A0876F89D854029D3B7F3EEE0242 /* YUIArchitectureKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A06112D3B3A91E304B41D5365C907169 /* YUIArchitectureKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -153,7 +151,6 @@
 		9032018E34BC5A03128FFC2ACDAED738 /* Pods-YUIKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YUIKit_Tests-Info.plist"; sourceTree = "<group>"; };
 		9469A8C6FA745C7BE4D513CE21234C09 /* YUIViewDelegateProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YUIViewDelegateProtocol.h; sourceTree = "<group>"; };
 		94B99FCFD06F321A6F09194DFCB7776C /* Pods-YUIKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-YUIKit_Tests.modulemap"; sourceTree = "<group>"; };
-		9699FE2F4C69E44CBB25631AF416013C /* YUIMediator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YUIMediator.h; path = YUIKit/Classes/YUIArchitecture/YUIMediator.h; sourceTree = "<group>"; };
 		984A822CEFC4C777B307621F8507D460 /* Pods-YUIKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YUIKit_Tests-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F4065B1B08EBF30DCC1618C523D30A6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -163,7 +160,6 @@
 		A5C1DDEA6E1A90C780AC0406B315FB99 /* YUIModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YUIModel.m; sourceTree = "<group>"; };
 		A5E359C65BD319ACFCE3431D0D555BE7 /* YUIDataSourceObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YUIDataSourceObject.m; sourceTree = "<group>"; };
 		A678B831BA90F03F429E4018540F352F /* YUIArchitectureKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YUIArchitectureKit.h; path = YUIKit/Classes/YUIArchitectureKit.h; sourceTree = "<group>"; };
-		A8C9404391C867FEC08405DB265471CE /* YUIMediator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YUIMediator.m; path = YUIKit/Classes/YUIArchitecture/YUIMediator.m; sourceTree = "<group>"; };
 		A92BF51F47C260B938BF1E13B7ABA4C8 /* Pods-YUIKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YUIKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		AB038A29D190A71D61B5664CE34C724F /* YUIViewControllerDelegateProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YUIViewControllerDelegateProtocol.h; sourceTree = "<group>"; };
 		AFA2633C09AE6C3D9CFDA57A67523546 /* YUIView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YUIView.h; sourceTree = "<group>"; };
@@ -359,8 +355,6 @@
 			isa = PBXGroup;
 			children = (
 				C864C84D3A96E6E084AB58ED462F10DC /* YUIArchitecture.h */,
-				9699FE2F4C69E44CBB25631AF416013C /* YUIMediator.h */,
-				A8C9404391C867FEC08405DB265471CE /* YUIMediator.m */,
 				E9956A653C27CFDE6F6B32B71106F933 /* Controller */,
 				109B6219653577F1618AAC0799A3C7E4 /* Model */,
 				6C8075C159B74F285996A5F66F343109 /* View */,
@@ -637,7 +631,6 @@
 				9D9002A823B870FEC6BFC70804A7E1DA /* YUILogger.h in Headers */,
 				E33F2F563266C9E8030C2DCC2FA5D22F /* YUILogItem.h in Headers */,
 				464794B821835F03BC061AB4CB8FA455 /* YUILogNameManager.h in Headers */,
-				8EDA5322A53E19F9A1665AB3C8308E02 /* YUIMediator.h in Headers */,
 				5CE89A50B0F1E34749CD9D8606D4BC88 /* YUIModel.h in Headers */,
 				E48E43F7CD1FC675D10E72434E810F15 /* YUIModelFrame.h in Headers */,
 				2B5141E2231A536B1824920478622700 /* YUIModelManager.h in Headers */,
@@ -730,7 +723,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1420;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -801,7 +794,6 @@
 				A6AD7024A5CD2BF75F7E1F9A0EB1FF4E /* YUILogger.m in Sources */,
 				305766A17304E95C5D410E1998D68EF0 /* YUILogItem.m in Sources */,
 				D1A8D73400172F4061864A8F3B3E9B42 /* YUILogNameManager.m in Sources */,
-				A72D61CF7FF10A193BC3C01D0E55E9EB /* YUIMediator.m in Sources */,
 				192EADC5C7902A61272A7F686B63016C /* YUIModel.m in Sources */,
 				2EA02E4AC046D7CE7F075276CED1465A /* YUIModelFrame.m in Sources */,
 				CEA73E2FB7490AFAE7D09EF5881BFE00 /* YUIModelManager.m in Sources */,
@@ -1042,6 +1034,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1103,6 +1096,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
