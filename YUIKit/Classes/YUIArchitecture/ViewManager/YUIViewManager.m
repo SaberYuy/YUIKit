@@ -82,12 +82,12 @@
         UIView* superView = self.managementView.superview;
         while (superView != nil) {
             
-            if (!superView.viewDelegate)
+            if (!superView.yui_viewDelegate)
                 break;
             
-            if ([superView.viewDelegate isKindOfClass:[YUIViewManager class]]) {
+            if ([superView.yui_viewDelegate isKindOfClass:[YUIViewManager class]]) {
                 
-                YUIViewManager *superViewManager = (YUIViewManager *)superView.viewDelegate;
+                YUIViewManager *superViewManager = (YUIViewManager *)superView.yui_viewDelegate;
                 
                 if (superViewManager.viewManagerDelegate) {
                     
@@ -95,9 +95,9 @@
                     break;
                 }
             }
-            else if([superView.viewDelegate isKindOfClass:[YUIViewModel class]] || ([superView.viewDelegate conformsToProtocol:@protocol(YUIViewModelProtocol)] && [superView.viewDelegate isKindOfClass:[NSObject class]])) {
+            else if([superView.yui_viewDelegate isKindOfClass:[YUIViewModel class]] || ([superView.yui_viewDelegate conformsToProtocol:@protocol(YUIViewModelProtocol)] && [superView.yui_viewDelegate isKindOfClass:[NSObject class]])) {
                 
-                NSObject <YUIViewModelProtocol>*superViewModel = (NSObject <YUIViewModelProtocol>*)superView.viewDelegate;
+                NSObject <YUIViewModelProtocol>*superViewModel = (NSObject <YUIViewModelProtocol>*)superView.yui_viewDelegate;
                 
                 if ([superViewModel conformsToProtocol:@protocol(YUIViewManagerDelegateProtocol)]) {
                     

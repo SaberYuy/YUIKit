@@ -11,9 +11,7 @@
 
 @implementation UIView (YUIEvent)
 
-YUISynthesizeIdWeakProperty(viewModel, setViewModel)
-
-YUISynthesizeIdCopyProperty(viewEventBlock, setViewEventBlock)
+YUISynthesizeIdWeakProperty(yui_viewModel, setYui_viewModel)
 
 //YUISynthesizeBOOLProperty(yui_isControllerRootView, setYui_isControllerRootView)
 //
@@ -37,7 +35,7 @@ YUISynthesizeIdCopyProperty(viewEventBlock, setViewEventBlock)
 //    return self.superview.yui_viewController;
 //}
 
-- (id<YUIViewDelegateProtocol>)viewDelegate {
+- (id<YUIViewDelegateProtocol>)yui_viewDelegate {
     
     id currentViewDelegate = objc_getAssociatedObject(self, _cmd);
     
@@ -45,8 +43,8 @@ YUISynthesizeIdCopyProperty(viewEventBlock, setViewEventBlock)
         
         UIView *superView = self.superview;
         while (superView != nil) {
-            if (superView.viewDelegate != nil) {
-                currentViewDelegate = superView.viewDelegate;
+            if (superView.yui_viewDelegate != nil) {
+                currentViewDelegate = superView.yui_viewDelegate;
                 break;
             }
             superView = superView.superview;
@@ -54,15 +52,15 @@ YUISynthesizeIdCopyProperty(viewEventBlock, setViewEventBlock)
         
         if (currentViewDelegate != nil) {
             
-            [self setViewDelegate:currentViewDelegate];
+            [self setYui_viewDelegate:currentViewDelegate];
         }
     }
     
     return objc_getAssociatedObject(self, _cmd);
 }
 
-- (void)setViewDelegate:(id<YUIViewDelegateProtocol>)viewDelegate {
-    objc_setAssociatedObject(self, @selector(viewDelegate), viewDelegate, OBJC_ASSOCIATION_ASSIGN);
+- (void)setYui_viewDelegate:(id<YUIViewDelegateProtocol>)viewDelegate {
+    objc_setAssociatedObject(self, @selector(yui_viewDelegate), viewDelegate, OBJC_ASSOCIATION_ASSIGN);
 }
 
 //- (id<YUIViewModelDelegateProtocol>)viewModel {

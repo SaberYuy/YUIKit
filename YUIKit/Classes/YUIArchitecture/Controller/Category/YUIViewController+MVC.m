@@ -67,7 +67,7 @@
 //        self.containerView.viewController = self;
         if([self conformsToProtocol:@protocol(YUIViewDelegateProtocol)]) {
             
-            self.containerView.viewDelegate = self;
+            self.containerView.yui_viewDelegate = self;
         }
     }
 }

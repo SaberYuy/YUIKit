@@ -69,7 +69,7 @@
 }
 
 /// 我觉得上层为subView一一绑定太过的繁琐，并且我觉得并不能很好的表达我的应用框架，所以我直接尝试在中层绑定，比起一一对应的理解上层绑定的关系，不如我直接在中层表达：如果你没有单独为view添加他的viewDelegate（它可以是controller或者viewManager），我将寻找下层视图的绑定情况，将代理给到他的父类的绑定
-- (id<YUIViewDelegateProtocol>)viewDelegate {
+- (id<YUIViewDelegateProtocol>)yui_viewDelegate {
     
     if (_viewDelegate == nil) {
         
@@ -77,9 +77,9 @@
         UIView* superView = self.superview;
         while (superView != nil) {
             
-            if (superView.viewDelegate != nil) {
+            if (superView.yui_viewDelegate != nil) {
                 
-                _viewDelegate = superView.viewDelegate;
+                _viewDelegate = superView.yui_viewDelegate;
                 break;
             }
             superView = superView.superview;

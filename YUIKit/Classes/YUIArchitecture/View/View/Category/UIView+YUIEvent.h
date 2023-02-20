@@ -23,10 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  viewDelegate 传递事件
  */
-@property (nullable, nonatomic, weak) id<YUIViewDelegateProtocol> viewDelegate;
+@property (nullable, nonatomic, weak) id<YUIViewDelegateProtocol> yui_viewDelegate;
 
 ///view 引用viewModel ，但反过来不行（即不要在viewModel中引入#import UIKit.h，任何视图本身的引用都不应该放在viewModel中）
-@property (nullable, nonatomic, weak) id<YUIViewModelDelegateProtocol> viewModel;
+@property (nullable, nonatomic, weak) id<YUIViewModelDelegateProtocol> yui_viewModel;
 
 @end
 

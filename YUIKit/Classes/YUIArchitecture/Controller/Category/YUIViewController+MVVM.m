@@ -68,7 +68,7 @@
         //  绑定viewManager与view
         if([self.viewManager conformsToProtocol:@protocol(YUIViewDelegateProtocol)]) {
             
-            self.containerView.viewDelegate = (NSObject<YUIViewDelegateProtocol>*)self.viewManager;
+            self.containerView.yui_viewDelegate = (NSObject<YUIViewDelegateProtocol>*)self.viewManager;
         }
         if([self.viewManager isKindOfClass:[YUIViewManager class]]) {
             
@@ -92,7 +92,7 @@
         
         if([self conformsToProtocol:@protocol(YUIViewDelegateProtocol)]) {
             
-            self.containerView.viewDelegate = self;
+            self.containerView.yui_viewDelegate = self;
         }
         if([self.viewModel isKindOfClass:[YUIViewModel class]]) {
             
